@@ -1,0 +1,68 @@
+.heroContent{
+    padding: 64px 0px 48px;
+}
+.heroButtons{
+    margin-top: 32px;
+  }
+  .cardGrid {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+  .card {
+    height: '100%';
+    display: 'flex';
+    flex-direction: 'column';
+  }
+  .cardMedia {
+    padding-top: '56.25%';
+  }
+  .cardContent{
+    flex-grow: 1;
+  }
+  .footer{
+    padding: 48px;
+  }
+
+  .button1{
+    background-color: #b91141; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 350px;
+    letter-spacing: normal;
+    line-height: 23.94px;
+  }
+
+.nav{
+    font-size: 20px;
+    line-height: 23px;
+    text-align: left;
+    letter-spacing: normal;
+    color:#444444 ;
+    padding-left: 20px;
+}
+.link{
+    padding-left:20px;
+    text-decoration:none ;
+    color:#444444;
+}
+
+.title{
+    text-align:start;
+    font-size:12px;
+    letter-spacing:normal;
+    line-height:20px;
+    color:#5d5d5d;
+    margin-top:15px;
+    margin-bottom:5px;
+}
+
+.logged{
+    margin-left: auto;
+}
