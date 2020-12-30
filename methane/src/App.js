@@ -1,10 +1,10 @@
 import './App.css';
-import { DonatePage } from './Components/DonatePage/DonatePage';
+import { Routes } from './Routes/Routes';
 
 function App() {
   return (
     <div className="App">
-      <DonatePage/>
+      <Routes/>
     </div>
   );
 }
