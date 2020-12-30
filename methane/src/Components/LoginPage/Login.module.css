@@ -1,0 +1,103 @@
+.body{
+    background-color: #9c3353;
+  padding: 120px 200px 110px 200px;
+  border: none;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+.img{
+    width: 250px;
+    height: 200px;
+    margin: 150px 0px 150px 80px
+}
+.login{
+    display: flex;
+    flex-direction: column;
+    float: right;
+    margin-right: 150px;
+}
+.top{
+    margin: 40px 30px 20px 0px;
+    text-align: center;
+    color: #777;
+}
+.btn{
+    padding-left: 13%;
+}
+button{
+    padding: 13px;
+    margin-right: 20px;
+    border-radius: 15px;
+    width: 130px;
+    background-color: #3b5998;
+    color: white;
+    border: none;
+    font-size: 14px;
+    border: none;
+    outline: none;
+}
+.seprator{
+    margin-top: 40px;
+    margin-bottom: 20px;
+    height: 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #fff;
+    position: relative;
+}
+.middle{
+    position: absolute;
+    padding: 0 16px;
+    color: #ccc;
+    background: #fff;
+    font-size: 11px;
+    text-shadow: 0 1px 0 #fff;
+    text-transform: uppercase;
+    color: #777;
+    font-size: 14px;
+    top: -9px;
+    left: 41%;
+}
+input{
+    margin-bottom: 20px;
+    width: 430px;
+    height: 40px;
+    font-size: 14px;
+    border: none;
+    border-bottom: 1px solid black;
+    border-color: #777;
+}
+.logindetails{
+    display: flex;
+    flex-direction: column;
+}
+.loginbtn{
+    border-radius: 15px;
+    border: none;
+    background-color: #9c3353;
+    color: white;
+    font-size: 14px;
+    outline: none;
+}
+.link{
+    text-decoration: none;
+    text-align: center;
+    font-size: 17px;
+    color: #9c3353;
+}
+.footer{
+    display: flex;
+    flex-direction: row;
+    margin-top: 70px;
+    font-size: 16px;
+    color: #777;
+}
+.signup{
+    width: 100px;
+    margin-left: 10px;
+    background-color: #9c3353;
+    padding: 10px;
+}
