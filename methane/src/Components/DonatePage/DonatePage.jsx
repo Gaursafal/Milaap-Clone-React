@@ -8,7 +8,7 @@ import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import styles from "./DonatePage.module.css"
 import {Link} from "react-router-dom"
-import SimpleMenu from "./SimpleMenu";
+
 
 
 
@@ -23,7 +23,7 @@ class DonatePage extends Component{
         const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
         return(
             <React.Fragment>
-            <AppBar position="relative" style={{background:"#f8f8f8",color:"#5d5d5d"}}>
+            {/* <AppBar position="relative" style={{background:"#f8f8f8",color:"#5d5d5d"}}>
               <Toolbar>
                 <Typography variant="h6" color="inherit" noWrap>
                   <Link to="/"><img src="https://assets.milaap.org/assets/milaap-logo-tiny-e1fe9eb152a9ab7297c3f9a194868904352a9fa2f19781ad8b39e4e18a372264.png" alt=""/></Link>
@@ -42,7 +42,7 @@ class DonatePage extends Component{
                 
                
               </Toolbar>
-            </AppBar>
+            </AppBar> */}
             <main>
               <div className={styles.heroContent}>
                 <Container maxWidth="sm">
