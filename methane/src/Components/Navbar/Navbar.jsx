@@ -71,7 +71,6 @@ class Navbar extends React.Component {
                      <Link to="/"><img src="https://assets.milaap.org/assets/milaap-logo-tiny-e1fe9eb152a9ab7297c3f9a194868904352a9fa2f19781ad8b39e4e18a372264.png" alt=""/></Link>
                     {links.map((link) => (
                         <NavLink
-                        exact
                         style={{ padding: "20px" }}
                         activeStyle={{ backgroundColor:"#9c3353"}}
                         key={link.to}

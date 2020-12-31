@@ -7,7 +7,7 @@ class DataContextProvider extends Component{
     constructor(props){
         super(props)
         this.state = {
-            isAuth:false,
+            isAuth:true,
             isLoading:false,
             error:false,
             fundData:[]
