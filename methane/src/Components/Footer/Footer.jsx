@@ -7,7 +7,7 @@ const Footer = () => {
         <div style={{padding:50}}>
             <hr/>
             <div className="row"  >
-                <div className="col-3"  >
+                <div className="col-lg-3 col-md-4 col-sm-6"  >
                     <div className={styles.main}>
                         <div className={styles.name} >Donate Towards</div>
                         <div>
@@ -23,7 +23,7 @@ const Footer = () => {
                     
                 </div>
 
-                <div className="col-3">
+                <div className="col-lg-3 col-md-4 col-sm-6">
                     <div className={styles.main} >
                     <div>
                         <button className={styles.mybtn} >Start a fundraiser</button>
@@ -55,7 +55,7 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className="col-3" >
+                <div className="col-lg-3 col-md-4 col-sm-6v" >
                     <div className={styles.main} >
                         <div className={styles.name}>Milaap</div>
                         <div>
@@ -77,7 +77,7 @@ const Footer = () => {
                     
                 </div>
 
-                <div className="col-3" >
+                <div className="col-lg-3 col-md-4 col-sm-6" >
                     <div className={styles.main} >
                     <div className={styles.office}>Indian office address</div>
                     <div> Milaap Social Ventures India Pvt. Ltd.

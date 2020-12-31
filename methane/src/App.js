@@ -15,7 +15,7 @@ function App() {
       {/* <Navbar/> */}
 
       {/* <Routes/> */}
-      {/* <CardDetails/> */}
+      <CardDetails/>
       {/* <HomePage/> */}
       {/* <DonatePage/> */}
       {/* <Pricing/> */}
