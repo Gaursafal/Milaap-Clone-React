@@ -1,0 +1,66 @@
+.Container{
+    padding-left: 15%;
+}
+.top{
+    display: flex;
+    flex-direction: row;
+    margin-top: 3%;
+}
+h1, h3{
+    color: rgb(128, 123, 123);
+}
+.collapse{
+    width: 270px;
+    height: 190px;
+}
+.img{
+    padding: 10px 10px 10px 0px;
+    width: 300px;
+}
+.display{
+    display: flex;
+    flex-direction: row;
+}
+.card{
+    height: 400px;
+    width: 800px;
+    margin: 20px 0px 50px 30px;
+    display : flex; 
+    flex-direction : row
+}
+.bar{
+    height: 20px;
+    width: 290px 
+}
+.btn{
+    width: 290px;
+    height: 50px;
+    background-color:white;
+    border-color: #b91141;
+    color: #b91141;
+    font-size: 19px;
+    outline: none;
+    font-weight: 600;
+}
+.h1{
+    color: #b91141;
+}
+.purpose{
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+.btn1{
+    border: none;
+    background-color: #b91141;
+    color: whitesmoke;
+    width: 100px;
+    height: 40px;
+    border-radius: 3px;
+    font-size: 16px;
+    
+}
+.input{
+    margin-top: 30px;
+    margin-right: 10px;
+    height: 40px;
+}
