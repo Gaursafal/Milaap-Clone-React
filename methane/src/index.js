@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+<<<<<<< HEAD
 import reportWebVitals from './reportWebVitals';
 import { DataContextProvider } from './Context/DataContextProvider';
 import {BrowserRouter} from "react-router-dom";
@@ -12,10 +13,13 @@ ReactDOM.render(
     <App />
     </BrowserRouter>
   </DataContextProvider>,
+=======
+import { BrowserRouter } from 'react-router-dom';
+
+ReactDOM.render(
+  <BrowserRouter>
+    <App />
+    </BrowserRouter>,
+>>>>>>> ec6a8730252107f61e19d8ef4cb07157ff9db187
   document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
