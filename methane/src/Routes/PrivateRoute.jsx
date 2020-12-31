@@ -3,7 +3,7 @@ import { Redirect, Route } from "react-router-dom";
 import { DataContext } from "../Context/DataContextProvider";
 
 const PrivateRoute = ({Component, ...rest}) => {
-    console.log(Component)
+    console.log("private")
     return(
         <DataContext.Consumer>
             {

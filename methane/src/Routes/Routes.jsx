@@ -12,12 +12,13 @@ class Routes extends Component {
     render(){
         return (
             <div>
-                 <Route path="/login"  render = {()=><Login />} />
+                 <Route path="/login" exact render = {()=><Login />} />
     
-                 <Route path="/reg"  render = {(props)=><Register {...props}/>} />
+                 <Route path="/reg"  exact render = {(props)=><Register {...props}/>} />
                  <PrivateRoute path="/"  Component={Navbar}/>
+                 
                 <Switch>
-                    <PrivateRoute  path="/" exact Component={HomePage}/>
+                    <Route  path="/" exact render={()=><HomePage/>}/>
                     <PrivateRoute  path="/crowdfunding/fundraisers" exact Component={DonatePage}/>
                     <PrivateRoute  path="/fundraisers/:support_name" exact Component={ViewFund}/>
                 </Switch>

@@ -2,22 +2,44 @@ import React from 'react';
 import styles from "./Login.module.css"
 import {Link} from "react-router-dom"
 import { DataContext } from '../../Context/DataContextProvider';
+import { Redirect } from "react-router-dom"
 
 export default class Login extends React.Component {
     constructor(props){
         super(props)
         this.state = {
             email:"",
-            password:""
+            password:"",
+            isFound:true
         }
     }
-    handleChange  = () =>{
-        
+    handleChange  = (e) =>{
+        const {name,value} = e.target
+        this.setState({
+            [name]:value
+        })
+
+    }
+    handleClick = (e) =>{
+        e.preventDefault()
+        let { email, password } = this.state;
+        let { authenticateUser } = this.context;
+        let found = authenticateUser({ email, password });
+       
+        this.setState({
+            isFound:found
+        })
     }
     render() {
-        return (
-            <>  
-                
+        let { isAuth, isLoading , error} = this.context;
+        let { email, password,isFound } = this.state;
+        return isLoading?(
+        <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+        )
+        :!isAuth?(
+             <> 
                 <div className = {styles.body}>
                 <div className = {styles.container}>
                     <img className={styles.img} src="/milap.png" alt = "milap"/>
@@ -30,14 +52,18 @@ export default class Login extends React.Component {
                         <div className={styles.seprator}>
                             <div className={styles.middle}> OR </div>
                         </div>
-                        <form>
-                        <div className = {styles.logindetails}>
-                            
-                            <input type="text"  name="email" placeholder="Mobile number / Email ID" onChange={this.handleChange} />
-                            <input type="text"  name="password" placeholder="Password / OTP" onChange={this.handleChange} />
-                            <input className = {styles.loginbtn} type = "submit" value = "Login" onClick={this.handleClick}></input>
-                            
-                        </div>
+                        <form onSubmit={this.handleClick}>
+                            <div className = {styles.logindetails}>
+                                
+                                <input type="text"  name="email" placeholder="Email ID" value = {email} onChange={this.handleChange} />
+                                <input type="text"  name="password" placeholder="Password" value={password} onChange={this.handleChange} />
+                                <input className = {styles.loginbtn} type = "submit" value = "Login" ></input>
+                                
+                            </div>
+                            { error && <div style = {{color:"red",textAlign:"center",margin:"5px"}}> wrong password</div> }
+                            { !isFound &&  
+                                <div style = {{color:"red"}}>user doesnot exists,pls register</div>
+                             }  
                         </form>
                         <Link className = {styles.link}>Forget Password ?</Link>
                         <div className = {styles.footer}>
@@ -49,7 +75,9 @@ export default class Login extends React.Component {
                 </div>
               
             </>
-        )
+        ): (
+            <Redirect to="/" />
+        );
     }
 }
 

@@ -7,12 +7,73 @@ class DataContextProvider extends Component{
     constructor(props){
         super(props)
         this.state = {
-            isAuth:true,
+            isAuth:false,
             isLoading:false,
             error:false,
-            fundData:[]
+            loggedUserData:null,
+            fundData:[],
+            userData:null,
         }
     }
+
+    authenticateUser=(data) =>{
+        console.log(data)
+        let { email, password } = data;
+        let { usersData } = this.state;
+        let auth = false;
+
+        for (let i = 0; i < usersData.length ; i++) {
+            
+            if (usersData[i].email === email && usersData[i].password === password) {
+                  console.log("looged")
+                    this.setState({
+                        isAuth: true,
+                        //add this
+                        loggedUserData:usersData[i]
+                    }); 
+                    auth = true   
+                    break  
+            }
+
+            else{
+                if(usersData[i].email === email && usersData[i].password !== password){
+
+                    this.setState({
+                        error: true
+                    }); 
+                    auth = true;
+                    break 
+                }
+            }
+        }
+        return auth
+    }
+    
+    componentDidMount() {
+        this.setState({
+            isLoading: false,
+        });
+
+        axios
+            .get("http://localhost:3004/users")
+
+            .then((res) => {
+                
+                this.setState({
+                    
+                    usersData: res.data,
+                    isLoading: false,
+                });
+            })
+
+            .catch((err) =>
+                this.setState({
+                    error: true,
+                    isLoading: false,
+                })
+            );
+    }
+
 
     //Donate page data
     getDonateData = () => {
@@ -24,6 +85,7 @@ class DataContextProvider extends Component{
         })
         .then(res => {
             this.setState({
+                isLoading:false,
                 fundData:res.data
             })
            
@@ -38,9 +100,10 @@ class DataContextProvider extends Component{
     }
 
     render(){
-        const {isAuth,isLoading,error,fundData} = this.state
-        const {getDonateData} = this
-        const value = {getDonateData, isAuth,isLoading,error,fundData}
+        const {isAuth,isLoading,error,fundData,loggedUserData,usersData} = this.state
+        console.log(usersData,loggedUserData)
+        const {authenticateUser,getDonateData} = this
+        const value = {authenticateUser,getDonateData, isAuth,isLoading,error,fundData,loggedUserData,usersData}
         return(
             <DataContext.Provider value={value}>
                 {this.props.children}

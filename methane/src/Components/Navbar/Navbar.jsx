@@ -1,6 +1,7 @@
 import React from "react";
 import {  NavLink, Link } from "react-router-dom";
 import styled from 'styled-components';
+import { DataContext } from "../../Context/DataContextProvider";
 import SimpleMenu from "../DonatePage/SimpleMenu";
 
 const NavBarWrapper = styled.div`
@@ -62,7 +63,7 @@ const links = [
 
 class Navbar extends React.Component {
     render(){
-        
+        const {loggedUserData} = this.context
         return (
             <NavBarWrapper className="navbar" >
              
@@ -88,7 +89,12 @@ class Navbar extends React.Component {
                     </Link>
 
                     <div style={{margin:"auto"}}>
-                    <SimpleMenu history={this.props.history}/>vikash
+                    <SimpleMenu 
+                        username={loggedUserData.username}
+                        avatar={loggedUserData.avatar_img}
+                        history={this.props.history}
+                    />
+                    {loggedUserData.username}
                     </div>
                 </RightLink>
             </NavBarWrapper>
@@ -96,4 +102,5 @@ class Navbar extends React.Component {
     }
     
 }
+Navbar.contextType = DataContext
 export default Navbar

@@ -26,22 +26,21 @@ export default function SimpleMenu({history,avatar,username,handelLogout}) {
     }
     else
     if(e.target.textContent === 'Edit Profile'){
-      history.push(`/savedposts/${username}`)
+      history.push(`/edit/${username}`)
     }
     
   };
-  
   return (
-    
+   
     <>
       <Button
        style={{padding:0}}
        aria-controls="simple-menu" aria-haspopup="true" 
        onClick={handleClick}>
         <Avatar
-                      className={styles.avatar_img}              
-                      alt={username}
-                      src={avatar}
+          className={styles.avatar_img}              
+          alt={username}
+          src={avatar}
                       />
         </Button>
       <Menu
