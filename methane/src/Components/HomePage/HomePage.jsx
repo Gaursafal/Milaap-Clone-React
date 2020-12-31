@@ -1,15 +1,24 @@
 import React, { Component } from 'react';
 import styles from './HomePage.module.css'
 import SearchIcon from '@material-ui/icons/Search';
-import data from './data.json'
 import {Link} from 'react-router-dom'
 import ReactPlayer from 'react-player'
+import axios from 'axios';
+import { DataContext } from '../../Context/DataContextProvider';
 
 class HomePage extends Component {
-
+    constructor(props){
+        super(props)
+        this.state={
+            
+        }
+    }
     
     render() {
-        
+        const {data} = this.context
+        console.log(data)
+        // const {url} = this.props.match
+        // console.log(url)
         return (
         <div>
             <div className="row">
@@ -90,6 +99,7 @@ class HomePage extends Component {
                     {
                         data.map((item)=> (
                         <div className="col-4">
+                            <Link to={`/${item.id}`} >
                             <div className="card card-body">
                                 <img src={item.img} width="400px" />
                                 <div className={styles.createdby} >
@@ -102,6 +112,7 @@ class HomePage extends Component {
                                     </div>
                                 </div>
                             </div>
+                            </Link>
                         </div>
                         ))
                     }
@@ -227,4 +238,6 @@ class HomePage extends Component {
         );
     }
 }
+
+HomePage.contextType = DataContext
 export default HomePage

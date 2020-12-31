@@ -3,12 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {BrowserRouter} from 'react-router-dom'
+import { DataContextProvider } from './Context/DataContextProvider';
+import {BrowserRouter} from "react-router-dom";
 
 ReactDOM.render(
-  <BrowserRouter>
+  <DataContextProvider>
+    <BrowserRouter>
     <App />
-  </BrowserRouter>,
+    </BrowserRouter>
+  </DataContextProvider>,
   document.getElementById('root')
 );
 
