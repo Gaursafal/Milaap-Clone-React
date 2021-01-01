@@ -9,7 +9,7 @@ const SharingCard = ({p_name, num, avatar}) => {
                     Campaign organiser
                 </div>
                 <div className={styles.flex}>
-                    <div className={styles.name}>
+                    <div className={styles.sname}>
                         {avatar}
                     </div>
                     <div className={styles.pname} >

@@ -85,7 +85,7 @@ class DonatePage extends Component {
                   <Link  style = {{textDecoration:"none"}} to={`/fundraisers/${item.support_name}`}>
                   <Card className={styles.card}>
                     <div className={styles.CardMedia}>
-                      <img height="220px" src={item.img[0]} alt="" />
+                      <img height="220px" src={item.img} alt="" />
                     </div>
 
                     <CardContent className={styles.cardContent}>

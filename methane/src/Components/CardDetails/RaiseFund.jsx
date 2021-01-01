@@ -49,7 +49,7 @@ class RaiseFund extends Component {
                     </p>
                     <div style={{fontSize:"20px"}}>Goal</div>
                     <div className={styles.option}>
-                        <div>
+                        <div className={styles.rupees} >
                             <select>
                                 <option>Rs.</option>
                                 <option>$</option>
@@ -59,10 +59,13 @@ class RaiseFund extends Component {
                         <input placeholder="3000" />
                     </div>
                     </div>
-                    <div className={styles.name} >Name your fundraiser</div>
-                    <input placeholder="milaap.org/fundraisers/" />
+                    <div className={styles.fundr} >Name your fundraiser</div>
+                    <div className={styles.org} >
+                        <input placeholder="milaap.org/fundraisers/" />
+                    </div>
+                    
                     <div className={styles.modalcard}>
-                        <button style={{backgroundColor:"#b91141"}} >start your fundraiser</button>
+                        <button >start your fundraiser</button>
                     </div>
                 </div>
             </Modal>
@@ -89,13 +92,14 @@ class RaiseFund extends Component {
             <SharingCard p_name="Deepak Srivastava" num="5" avatar="DS" />
             <SharingCard p_name="Dhraj Khatri" num="4" avatar="DK" />
 
-            <div>Supporters</div>
+            <div className={styles.support} >Supporters</div>
+            <hr/>
             <div>Donated to this campaign via Bank transfer/QR Code? Click here if you can’t find your donation listed below.</div>
             <SupportersCard p_name="Shravani" money="1,000" avatar="SR" />
-            <SupportersCard p_name="Atchuthan" money="1,00" avatar="A" />
+            <SupportersCard p_name="Atchuthan" money="100" avatar="A" />
             <SupportersCard p_name="Abhijit" money="2,000" avatar="AB" />
-            <SupportersCard p_name="Anonymous" money="2,000" avatar="A" />
-            <SupportersCard p_name="Anonymous" money="1,000" avatar="A" />
+            <SupportersCard p_name="Anonym" money="2,000" avatar="A" />
+            <SupportersCard p_name="Anonym" money="1,000" avatar="A" />
             <ReportFund/>
         </div>
         );

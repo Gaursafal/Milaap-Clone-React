@@ -10,7 +10,9 @@ class Card extends Component {
     // modals code
     state = {
         visible: false,
-        status: false
+        status: false,
+        color: false,
+        text: false
     };
     
     showModal = () => {
@@ -31,12 +33,16 @@ class Card extends Component {
 
     handleClick = () => {
         this.setState({
-            status: !this.state.status
+            status: !this.state.status,
+            color: !this.state.color,
+            text:!this.state.text
         })
     }
 
     render(){
         const {visible, status} = this.state
+        let btncolor = this.state.color?"red":"white"
+        let textcolor = this.state.text?"white":"black"
         return (
             <div>
                 <div className={styles.border} >
@@ -56,8 +62,13 @@ class Card extends Component {
                                     <h3>Make a secure donation </h3>
                                     <hr/>
                                     <div className={styles.btn}>
-                                        <button onClick={this.handleClick} >one Time</button>
-                                        <button onClick={this.handleClick}>Monthly</button>
+                                        <div>
+                                            <button  onClick={this.handleClick} >one Time</button>
+                                        </div>
+                                        <div>
+                                            <button onClick={this.handleClick}>Monthly</button>
+                                        </div>
+                                        
                                     </div>
                                     {
                                         status?<Monthly/>:<OneTime/>

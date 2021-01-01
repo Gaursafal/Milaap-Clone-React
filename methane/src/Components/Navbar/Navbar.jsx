@@ -93,7 +93,7 @@ class Navbar extends React.Component {
                         {link.title}
                         </NavLink>
                     ))}
-             </NavLeft>
+                </NavLeft>
                 
                 <RightLink className="rightlink" >
                     

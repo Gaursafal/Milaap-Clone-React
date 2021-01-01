@@ -1,22 +1,22 @@
 import React from 'react';
-import styles from './Card.module.css'
+import styles from './OneTime.module.css'
 
 const Monthly = () => {
     return (
         <div>
-            <div style={{backgroundColor:"#9c3353"}} >
+            <div className={styles.currency}>
                 <div>
                     <div>Currency</div>
-                    <input/>
+                    <input placeholder="INR"/>
                 </div>
                 <div>
                     <div>Amount</div>
-                    <input/>
+                    <input placeholder="2500"/>
                 </div>
             </div>
-            <p>Milaap charges NO fees. We rely on donors like you to cover for our expenses. Kindly consider a tip. Thank you 🙏
+            <p className={styles.milaap}>Milaap charges NO fees. We rely on donors like you to cover for our expenses. Kindly consider a tip. Thank you 🙏
             </p>
-            <div>
+            <div className={styles.tip}>
                 <div>include a tip of</div>
                 <div>
                     <select>
@@ -24,30 +24,22 @@ const Monthly = () => {
                     </select>
                 </div>
             </div>
-            <div>
+            <div className={styles.place} >
                 <input placeholder="Name" />
                 <input placeholder="Email Id" />
                 <input placeholder="Phone Number" />
             </div>
-            <div>Select a payment method</div>
-            <p>Setup a standing instruction on your card / bank account. The deduction will happen on 1st of every month.
-            </p>
-            <div className={styles.radio}>
-                <input type="radio" id="indian" name="drone" value="indian"
-                        checked/>
-                <label for="indian">
-                    Indian
-                    Credit Cards (VISA and Mastercard) and Debit Cards (ICICI, Citibank, Canara, Kotak Mahindra)
-                </label>
+            <div className={styles.donate} >Donate using</div>
+            <div className={styles.net} >
+            <div>Netbanking, Credit/Debit Cards & more</div>
+            <div>Pay using PayTM</div>
+            <div>Pay using any of UPI apps or Scan QR</div>
+            <div>Make Direct Bank Transfer (NEFT/RTGS/IMPS)
+                Bank Account details and instructions are provided in the next step
             </div>
-            <div className={styles.radio} >
-                
-                <input type="radio" id="international" name="drone" value="international"
-                        checked/>
-                <label for="international">
-                    International
-                    (Credit / Debit cards issued outside India)
-                </label>
+            </div>
+            <div className={styles.gap} >
+            <button className={styles.contbtn}>Continue to pay Rs.2800/month</button>
             </div>
         </div>
     );
