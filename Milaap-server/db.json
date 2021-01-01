@@ -1,0 +1,139 @@
+{
+  "users": [
+    {
+      "user_id": "92748882-c1e7-4097-b34c-06e629af2ea8",
+      "email": "alok@gmail.com",
+      "username": "alok123",
+      "fullName": "Alok Nath",
+      "password": "123",
+      "avatar_img": "https://pbs.twimg.com/profile_images/1334074362035531777/F0Ezn87p_400x400.jpg",
+      "profile_description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since",
+      "id": 1
+    },
+    {
+      "user_id": "16d2beec-60b8-4e4d-9565-5a1efa76f11b",
+      "email": "vikash@gmail.com",
+      "username": "vikas123",
+      "fullName": "Vikash Kumar",
+      "password": "123",
+      "avatar_img": "https://pbs.twimg.com/profile_images/1342660289582358531/vmtaPOyU.jpg",
+      "profile_description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since",
+      "id": 2
+    },
+    {
+      "user_id": "a3733b7e-f18d-41c5-9f49-1d5675cb608c",
+      "email": "eve.holt@reqres.in",
+      "username": "Eve",
+      "fullName": "Eve Holt",
+      "password": "123",
+      "avatar_img": "https://pbs.twimg.com/profile_images/1342660289582358531/vmtaPOyU.jpg",
+      "profile_description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since",
+      "id": 3
+    },
+    {
+      "user_id": "90201eb8-95b3-4dbf-9a91-d11cf4e82456",
+      "email": "safal@gmail.com",
+      "username": "safal",
+      "fullName": "Safal singh",
+      "password": "123",
+      "avatar_img": "https://media-exp1.licdn.com/dms/image/C4E03AQH2e6qwYPGhew/profile-displayphoto-shrink_400_400/0/1592945427972?e=1614816000&v=beta&t=r64g1AiU81wqMywdmQrs0EkbNGmLfzuAPLicZD0mF8c",
+      "profile_description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since",
+      "id": 4
+    }
+  ],
+  "fundraise": [
+    {
+      "fund_id": 1,
+      "name":"vikash",
+      "support_name": "Ramit Roy",
+      "title": "Help my friend in repaying money borrowed to save his father's life🙏",
+      "shares": 35,
+      "story": "My name is Ankit Pahwa and I seek your help for my friend, Paras Marwah. Paras bore extreme financial pressure to pay for the medical expenses to save the life of his father.His father was on ventilator support for over 25 days this time as he was fighting against a rare life threatening condition of Urosepsis and Septic Shock with diabetes. The infection spread throughout his body in these 3 years as he was admitted to hospital for over 20 times during this period. He spent over 50 days in hospital every year during this tenure.Despite multiple efforts and procedures undertaken by the doctors, he passed away on 17th December, 2020 at Sarvodaya Hospital, Faridabad.Existing financial burden and money borrowed for medical expense Despite being medically insured, Paras had to spend his family savings and borrow money to pay for his father's medical expenses (as insurance pays 80% and 20% has to be paid by self, which ultimately turns out to be 70% - 30% as many items/procedures are not covered under insurance).",
+      "supporters": 1234,
+      "raised": 500863,
+      "goal": 541110,
+      "img": [
+        "https://images.milaap.org/milaap/image/upload/v1608394250/production/images/campaign/237902/medical_1553587798_1608033385.jpg?crop=faces&enhance=true&format=jpg&height=452&mode=crop&width=603"
+      ]
+    },
+    {
+      "fund_id": 2,
+       "name":"Aman raj",
+      "support_name": "Aman Raj",
+      "title": "Help Children from the Fishing Community Access Education",
+      "shares": 43,
+      "story": "My name is Ankit Pahwa and I seek your help for my friend, Paras Marwah. Paras bore extreme financial pressure to pay for the medical expenses to save the life of his father.His father was on ventilator support for over 25 days this time as he was fighting against a rare life threatening condition of Urosepsis and Septic Shock with diabetes. The infection spread throughout his body in these 3 years as he was admitted to hospital for over 20 times during this period. He spent over 50 days in hospital every year during this tenure.Despite multiple efforts and procedures undertaken by the doctors, he passed away on 17th December, 2020 at Sarvodaya Hospital, Faridabad.Existing financial burden and money borrowed for medical expense Despite being medically insured, Paras had to spend his family savings and borrow money to pay for his father's medical expenses (as insurance pays 80% and 20% has to be paid by self, which ultimately turns out to be 70% - 30% as many items/procedures are not covered under insurance).",
+      "supporters": 1234,
+      "raised": 511863,
+      "goal": 841110,
+      "img": [
+        "https://images.milaap.org/milaap/image/upload/v1605772230/production/images/campaign/230944/Untitled_design_12_nsxpwq_1605772483.png?crop=faces&enhance=true&format=jpg&height=452&mode=crop&width=603"
+      ]
+    },
+    {
+      "fund_id": 3,
+      "name":"saurabh",
+      "support_name": "Ramit Roy",
+      "title": "Help my friend in repaying money borrowed to save his father's life🙏",
+      "shares": 35,
+      "story": "My name is Ankit Pahwa and I seek your help for my friend, Paras Marwah. Paras bore extreme financial pressure to pay for the medical expenses to save the life of his father.His father was on ventilator support for over 25 days this time as he was fighting against a rare life threatening condition of Urosepsis and Septic Shock with diabetes. The infection spread throughout his body in these 3 years as he was admitted to hospital for over 20 times during this period. He spent over 50 days in hospital every year during this tenure.Despite multiple efforts and procedures undertaken by the doctors, he passed away on 17th December, 2020 at Sarvodaya Hospital, Faridabad.Existing financial burden and money borrowed for medical expense Despite being medically insured, Paras had to spend his family savings and borrow money to pay for his father's medical expenses (as insurance pays 80% and 20% has to be paid by self, which ultimately turns out to be 70% - 30% as many items/procedures are not covered under insurance).",
+      "supporters": 1234,
+      "raised": 911863,
+      "goal": 1411100,
+      "img":["https://images.milaap.org/milaap/image/upload/v1608709581/production/images/campaign/239753/WhatsApp_Image_2020-12-23_at_13.13.28_1_ynwyi9_1608709584.jpg?crop=faces&format=jpg&height=198&mode=crop&width=264"]
+    },
+    {
+      "fund_id": 4,
+      "name":"Mridul",
+      "support_name": "support-farmers-for-forests",
+      "title": "Plant 40,000 trees on degraded land to support farmers in Maharashtra",
+      "shares": 35,
+      "story": "Farmers all over India are among the worst affected by rising temperatures, erratic rainfalls and extreme weather events like floods, cyclones and droughts, leading to decreased agricultural yields. Every day, 28 people dependent on farming die by suicide in India. Maharashtra is the worst hit state with nearly 4000 farmers committing suicide in the state in 2019 alone. At the same time land degradation is increasing and large areas of land are becoming unusable and difficult to cultivate. By the government’s estimate nearly 30% of land in India is degraded. ",
+      "supporters": 2234,
+      "raised": 488333,
+      "goal": 2000000,
+      "img":["https://images.milaap.org/milaap/image/upload/v1608654307/production/images/campaign/237031/Copy_of_Copy_of_Copy_of_Copy_of_Untitled-2_ilqrdx_1608654315.png?crop=faces&enhance=true&format=jpg&height=452&mode=crop&width=603"]
+    },
+    {
+      "fund_id": 5,
+      "name":"Hemant",
+      "support_name": "support-to-reduce-the-incidence-of-sexual-violence-in-india",
+      "title": "support-to-reduce-the-incidence-of-sexual-violence-in-india",
+      "shares": 35,
+      "story": "Shocked by the gangrape of Dr Priyanka Reddy in Nov 2019 , 4 alumni of IIMs and two change makers were drawn together to eliminate this scourge from India.",
+      "supporters": 49,
+      "raised": 329874,
+      "goal": 2500000,
+      "img":["https://images.milaap.org/milaap/image/upload/v1609129536/production/images/campaign/240889/Parivartan_Poster_Resized_sskmw7_1609129542.png?crop=faces&format=jpg&height=198&mode=crop&width=264"]
+    },
+    {
+      "fund_id": 6,
+      "name":"Prashant",
+      "support_name": "support-basicshit",
+      "title": "Toilets Needed: too few, too filthy at Farmers Protest Sites",
+      "shares": 15,
+      "story": "There are over 10,000 protesting farmers camping at the Tikri Border and over 18,000 at Singhu border in Delhi and their numbers are constantly growing as the resistance remains long and arduous. Sanitation remains a major unsolved challenge which puts the farmers, especially women and senior citizens at increased health and safety risk amidst the pandemic. Hence, installation of safe, comfortable and accessible toilets is an urgent humanitarian and social justice need.",
+      "supporters": 49,
+      "raised":581550,
+      "goal": 1800000,
+      "img":["https://images.milaap.org/milaap/image/upload/v1608366275/production/images/campaign/238861/cover_photo_m2qbmz_1608366641.jpg?crop=faces&enhance=true&format=jpg&height=452&mode=crop&width=603"]
+    }
+  ],
+  "fundDetails":[
+    {
+      "lend_id":1,
+      "name":"Swanalta",
+      "gender":"female",
+      "support_name": "support-basicshit",
+      "title": "Swarnalata Barik And Group",
+      "purpose":"to purchase better crop seeds, fertilizers, herbicides, etc. in order to expand her vegetable selling enterprise",
+      "location":"Puri, Orissa",
+      "story": "Swarnalata (2nd member from left) is a 35-year-old woman from a small village near Cuttack, Odisha. She has a family of 5 and a monthly household income of INR 8,300. She is a hardworking woman engaged in farming activities and selling varieties of vegetables in the market. She produces cauliflower, cabbage, potato, tomato, brinjal, etc. in her field. She wishes to expand her little enterprise so that her household income and savings get a boost and she can contribute more substantially to the household expenses. She has formed an",
+      "raised":581550,
+      "goal": 1800000,
+      "img":"https://images.milaap.org/milaap/image/upload/v1584345617/production/images/loan/a020o000010MT6ZAAW-Enterprisephoto3_1584345615.jpg?crop=faces&format=jpg&height=215&mode=crop&width=320"
+      
+    }
+  ]
+
+}

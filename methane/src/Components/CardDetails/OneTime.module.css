@@ -1,0 +1,72 @@
+.currency{
+    background-color: #b91141;
+    display: flex;
+    margin-top: 10px;
+    padding-left: 5px;
+}
+
+.place > input::placeholder {
+    color:  grey;
+}
+
+.place > input {
+    padding: 10px;
+}
+
+.gap{
+    margin-top: 30px;
+}
+
+.currency > div {
+    margin: 10px;
+}
+
+::placeholder{
+    color: white;
+}
+
+.currency > div > input {
+    border-bottom: 1px solid white;
+    background-color: #b91141;
+}
+
+.currency > div > * {
+    color: white;
+}
+
+.milaap{
+    padding: 10px;
+    text-align: left;
+}
+
+.tip{
+    display: flex;
+}
+
+.contbtn{
+    width: 100%;
+    padding: 10px 20px 10px 20px;
+    background-color:  #b91141;
+    color: white;
+    font-size: 20px;
+}
+
+.net{
+    padding: 10px 0px 10px 0px;
+}
+
+.net > * {
+    border: 1px solid grey;
+    padding: 10px;
+    margin: 5px;
+}
+
+.tip > div:nth-child(1) {
+    margin-right: 250px;
+    padding: 10px;
+}
+
+.donate{
+    padding: 10px;
+    font-size: 22px;
+}
