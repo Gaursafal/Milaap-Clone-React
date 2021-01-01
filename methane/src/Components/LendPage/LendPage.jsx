@@ -16,7 +16,41 @@ function callback(key) {
 }
 
 class LendPage extends Component {
+    constructor(props){
+        super(props)
+        this.state = {
+            lendData :[],
+            lendInput:2500.00
+        }
+    }
+    componentDidMount(){
+        const {getLendData} = this.context
+        getLendData()
+    }
+    
+    handleChange =(e)=>{
+        const {name,value} = e.target
+        this.setState({
+            [name]:value
+        })
+    }
+
+    handleLend =()=>{
+        console.log("lend")
+    }
+
+    completeLoan = (id) =>{
+        console.log(id,"complete")
+        const {addToCart} = this.context
+         addToCart(id)
+        
+    
+    }
+
     render() {
+        const {lendData} = this.context
+        //console.log(cartArray)
+        const {lendInput} = this.state
         const { Panel } = Collapse;
         return (
             <div>
@@ -82,40 +116,42 @@ class LendPage extends Component {
 
                         {/* Card Start */}
                         <div>
-                            <div className={styles.card}>
-                                <div style={{ paddingLeft: "10px", paddingRight: "15px" }}>
-                                    <img className={styles.img} src="https://images.milaap.org/milaap/image/upload/v1584345617/production/images/loan/a020o000010MT6ZAAW-Enterprisephoto3_1584345615.jpg?crop=faces&format=jpg&height=215&mode=crop&width=320" alt="name" />
-                                    <LinearProgress className={styles.bar} variant="determinate" value="20" />
-                                    <div className={styles.display}>
-                                        <div>
-                                             Funded
-                                            <p>$28792.89</p>
+                            {
+                                lendData?.map((item)=>{
+                                        return(
+                                            <div key={item.fund_id} className={styles.card}>
+                            
+                                            <div style={{ paddingLeft: "10px", paddingRight: "15px" }}>
+                                                <img className={styles.img} src={item.img} alt="name" />
+                                                <LinearProgress className={styles.bar} variant="determinate" value="20" />
+                                                <div className={styles.display}>
+                                                    <div>
+                                                         Funded
+                                                        <p>Rs.{item.raised}</p>
+                                                    </div>
+                                                    <div style={{ paddingLeft: "120px", textAlign: "right" }}>
+                                                        Still Requires
+                                                        <p>{item.goal-item.raised}</p>
+                                                    </div>
+                                                </div>
+                                                <button onClick = {()=>this.completeLoan(item.lend_id)} className={styles.btn}>Complete the Loan</button>
+                                            </div>
+                                            <div>
+                                                <Link to="" style={{textDecoration:"red",borderBottomColor:"red"}}><h1 className={styles.h1}>Swarnlata Barik & Group</h1></Link>
+                                                <div><LocationOnIcon />NUPATNA, Odisa</div>
+                                                <div className={styles.purpose}><b>Purpose</b> : to purchase better crop seeds, fertilizers, herbicides, etc. in order to expand her vegetable selling enterprise</div>
+                                                <div className={styles.desc}>{item.story}
+                                                ... <Link>Read more</Link>
+                                                </div>
+                                                <AttachMoneyIcon />
+                                                <input className={styles.input} name = "lend" value={lendInput} type="text" onChange={this.handleChange}></input>
+                                                <button className={styles.btn1} onClick={this.handleLend}>Lend</button>
+                                            </div>
                                         </div>
-                                        <div style={{ paddingLeft: "120px", textAlign: "right" }}>
-                                            Still Requires
-                                            <p>$286</p>
-                                        </div>
-                                    </div>
-                                    <button className={styles.btn}>Complete the Loan</button>
-                                </div>
-                                <div>
-                                    <Link to="" style={{textDecoration:"red",borderBottomColor:"red"}}><h1 className={styles.h1}>Swarnlata Barik & Group</h1></Link>
-                                    <div><LocationOnIcon />NUPATNA, Odisa</div>
-                                    <div className={styles.purpose}><b>Purpose</b> : to purchase better crop seeds, fertilizers, herbicides, etc. in order to expand her vegetable selling enterprise</div>
-                                    <div className={styles.desc}>Swarnalata (2nd member from left) is a 35-year-old woman from a small village
-                                    near Cuttack, Odisha. She has a family of 5 and a monthly household income
-                                    of INR 8,300. She is a hardworking woman engaged in farming activities and
-                                    selling varieties of vegetables in the market. She produces cauliflower,
-                                    cabbage, potato, tomato, brinjal, etc. in her field. She wishes to expand
-                                    her little enterprise so that her household income and savings get a boost
-                                    and she can contribute more substantially to the household expenses. She
-                                 has formed an ... <Link>Read more</Link>
-                                    </div>
-                                    <AttachMoneyIcon />
-                                    <input className={styles.input} type="text"></input>
-                                    <button className={styles.btn1}>Lend</button>
-                                </div>
-                            </div>
+                                        )
+                                    })
+                                }
+                            
                         </div>
 
                         {/* Card end */}

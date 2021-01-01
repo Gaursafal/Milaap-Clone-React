@@ -1,0 +1,46 @@
+.btn{
+    width: 100%;
+    color: red;
+    border: 1px solid red;
+}
+
+.name{
+    background-color: white;
+    border-radius: 30px;
+    padding: 10px;
+    text-align: center;
+}
+
+.most {
+    font-size: 20px;
+}
+
+.bg{
+    background-color: grey;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+.bg > div:nth-child(1){
+    padding: 5px;
+}
+
+.pname{
+    text-align: left;
+}
+
+.pname > p:nth-child(2) {
+    margin-top: -30px;
+    font-size: 15px;
+}
+
+.flex{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+.benificiary{
+    margin-top: 20px;
+    background-color: grey;
+    padding: 5px;
+}

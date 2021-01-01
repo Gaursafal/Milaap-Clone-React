@@ -3,6 +3,7 @@ import {  NavLink, Link } from "react-router-dom";
 import styled from 'styled-components';
 import { DataContext } from "../../Context/DataContextProvider";
 import SimpleMenu from "../DonatePage/SimpleMenu";
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 
 const NavBarWrapper = styled.div`
     overflow:hidden;
@@ -74,7 +75,7 @@ const links = [
 
 class Navbar extends React.Component {
     render(){
-        const {loggedUserData} = this.context
+        const {loggedUserData,handleLogOut} = this.context
         return (
             <NavBarWrapper className="navbar" >
                 <NavLeft className="navleft" >
@@ -99,12 +100,16 @@ class Navbar extends React.Component {
                     <Link to="/start" >
                         <div>Start a fundraiser</div>
                     </Link>
-
+                      
+                    <Link to="/cart" >
+                        <ShoppingCartIcon/>
+                    </Link>
                     <div style={{margin:"auto"}}>
                     <SimpleMenu 
                         username={loggedUserData.username}
                         avatar={loggedUserData.avatar_img}
                         history={this.props.history}
+                        handleLogout = {handleLogOut}
                     />
                     {loggedUserData.username}
                     </div>

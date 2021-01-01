@@ -24,6 +24,7 @@ class DonatePage extends Component {
   render() {
     //console.log(this.context.fundData)
     const { fundData } = this.context;
+    console.log(fundData)
     return (
       <React.Fragment>
         <main>

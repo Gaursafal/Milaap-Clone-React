@@ -5,7 +5,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Avatar from '@material-ui/core/Avatar'
 import styles from './SimpleMenu.module.css'
 
-export default function SimpleMenu({history,avatar,username,handelLogout}) {
+export default function SimpleMenu({history,avatar,username,handleLogout}) {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const handleClick = (event) => {
@@ -22,7 +22,7 @@ export default function SimpleMenu({history,avatar,username,handelLogout}) {
     }
     else
     if(e.target.textContent === 'Logout'){
-      handelLogout();
+      handleLogout();
     }
     else
     if(e.target.textContent === 'Edit Profile'){
