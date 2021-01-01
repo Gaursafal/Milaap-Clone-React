@@ -1,18 +1,17 @@
 import React from "react";
 import {  NavLink, Link } from "react-router-dom";
 import styled from 'styled-components';
-import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import { DataContext } from "../../Context/DataContextProvider";
+import SimpleMenu from "../DonatePage/SimpleMenu";
 
 const NavBarWrapper = styled.div`
-    display: flex;
-    justify-content: space-between;
     overflow:hidden;
     position: fixed;
     background-color: white;
     width:100%;
     top:0;
     height: 80px;
-    padding-left: 20px;
+   
     a {
         text-decoration: none;
         color: black;
@@ -50,12 +49,13 @@ const RightLink = styled.div`
 `
 
 const links = [
+   
     {
         to: "/",
         title: "Home"
     },
     {
-        to: "/donate",
+        to: "/crowdfunding/fundraisers",
         title: "Donate"
     },
     {
@@ -74,7 +74,7 @@ const links = [
 
 class Navbar extends React.Component {
     render(){
-        
+        const {loggedUserData} = this.context
         return (
             <NavBarWrapper className="navbar" >
                 <NavLeft className="navleft" >
@@ -92,21 +92,31 @@ class Navbar extends React.Component {
                         {link.title}
                         </NavLink>
                     ))}
-                </NavLeft>
+             </NavLeft>
                 
                 <RightLink className="rightlink" >
                     
                     <Link to="/start" >
                         <div>Start a fundraiser</div>
                     </Link>
-                    <Link to="/login">
+                    {/* <Link to="/login">
                         <img src="https://assets.milaap.org/assets/header/user-icon-dfb080c6054d6a209639e60bd2bc033a2b79a8528da7131a2f118b92dd5589ae.png" />
-                    </Link>
+                    </Link> */}
                     
+
+                    <div style={{margin:"auto"}}>
+                    <SimpleMenu 
+                        username={loggedUserData.username}
+                        avatar={loggedUserData.avatar_img}
+                        history={this.props.history}
+                    />
+                    {loggedUserData.username}
+                    </div>
                 </RightLink>
             </NavBarWrapper>
         );
     }
     
 }
+Navbar.contextType = DataContext
 export default Navbar

@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import styles from './HomePage.module.css'
 import SearchIcon from '@material-ui/icons/Search';
 import {Link} from 'react-router-dom'
-import ReactPlayer from 'react-player'
-import axios from 'axios';
 import { DataContext } from '../../Context/DataContextProvider';
+import FundData from './FundData';
 
 class HomePage extends Component {
     constructor(props){
@@ -15,16 +14,15 @@ class HomePage extends Component {
     }
     
     render() {
-        const {data} = this.context
-        console.log(data)
-        // const {url} = this.props.match
-        // console.log(url)
+        const {fundData} = this.context
+        console.log(fundData)
+        console.log(this.context)
         return (
         <div>
             <div className="row">
-                <div className="col-7">
-                    <div className={styles.float} >
-                        <Link>Help Daulat Rescue And Employ Acid Attack Survivors </Link>
+                <div className="col-lg-7 col-sm-12">
+                    <div className={styles.float}>
+                        <Link>Help Daulat Rescue And Employ Acid Attack Survivors</Link>
                     </div>
                     <div className={styles.leftdiv} >
                     <h1>Milaap</h1>
@@ -51,9 +49,9 @@ class HomePage extends Component {
                     </div>
                 </div>
                 </div>
-                <div className="col-5">
-                    <div  >
-                        <img src="https://images.milaap.org/milaap/image/upload/v1597899996/production/entity_details/milaap_page/524/banner-image-sample2_1597899995.png?format=jpg" width="100%" />
+                <div className="col-lg-5 col-sm-12">
+                    <div>
+                        <img src="https://images.milaap.org/milaap/image/upload/v1597899996/production/entity_details/milaap_page/524/banner-image-sample2_1597899995.png?format=jpg" width="100%" alt="" />
                     </div>
                 </div>
             </div>
@@ -96,71 +94,18 @@ class HomePage extends Component {
                 </div>
                     <div class="collapse" id="collapseExample">
                     <div className="row">
-                    {
-                        data.map((item)=> (
-                        <div className="col-4">
-                            <Link to={`/${item.id}`} >
-                            <div className="card card-body">
-                                <img src={item.img} width="400px" />
-                                <div className={styles.createdby} >
-                                    <div>
-                                        <p>created by</p>
-                                        <p>Litton</p>
-                                    </div>
-                                    <div>
-                                        <p>Raised  </p>
-                                    </div>
-                                </div>
-                            </div>
-                            </Link>
-                        </div>
-                        ))
-                    }
+                        <FundData fundData={fundData}/>
                     </div>
                     </div>
                     <div class="collapse" id="collapseExample1">
                     <div className="row">
-                    {
-                        data.map((item)=> (
-                            <div className="col-4">
-                                <div className="card card-body">
-                                    <img src={item.img} width="400px" />
-                                    <div className={styles.createdby} >
-                                        <div>
-                                            <p>created by</p>
-                                            <p>Litton</p>
-                                        </div>
-                                        <div>
-                                            <p>Raised  </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        ))
-                    }
+                        <FundData fundData={fundData}/>
                     </div>
                     </div>
 
                     <div class="collapse" id="collapseExample2">
                     <div className="row">
-                    {
-                        data.map((item)=> (
-                            <div className="col-4">
-                                <div className="card card-body">
-                                    <img src={item.img} width="400px" />
-                                    <div className={styles.createdby} >
-                                        <div>
-                                            <p>created by</p>
-                                            <p>Litton</p>
-                                        </div>
-                                        <div>
-                                            <p>Raised  </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        ))
-                    }
+                        <FundData fundData={fundData} />
                     </div>
                     </div>
             </div>

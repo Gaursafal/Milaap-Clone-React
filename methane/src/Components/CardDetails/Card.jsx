@@ -10,7 +10,7 @@ class Card extends Component {
     // modals code
     state = {
         visible: false,
-        status: true
+        status: false
     };
     
     showModal = () => {
@@ -28,6 +28,12 @@ class Card extends Component {
     handleCancel = () => {
         this.setState({ visible: false });
     };
+
+    handleClick = () => {
+        this.setState({
+            status: !this.state.status
+        })
+    }
 
     render(){
         const {visible, status} = this.state
@@ -50,11 +56,11 @@ class Card extends Component {
                                     <h3>Make a secure donation </h3>
                                     <hr/>
                                     <div>
-                                        <button>one Time</button>
-                                        <button>Monthly</button>
+                                        <button onClick={this.handleClick} >one Time</button>
+                                        <button onClick={this.handleClick}>Monthly</button>
                                     </div>
                                     {
-                                        !status?<OneTime/>:<Monthly/>
+                                        status?<Monthly/>:<OneTime/>
                                     }
                                 </div>
                                 </Modal>

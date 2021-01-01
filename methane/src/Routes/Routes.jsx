@@ -1,17 +1,32 @@
-import React from 'react';
-import HomePage from '../Components/HomePage/HomePage';
-import {Route} from 'react-router-dom'
-import CardDetails from '../Components/CardDetails.jsx/CardDetails';
+import React, { Component } from "react"
+import {Route,Switch} from "react-router-dom"
+import {DonatePage} from "../Components/DonatePage/DonatePage"
+import { ViewFund } from "../Components/DonatePage/ViewFund"
+import HomePage from "../Components/HomePage/HomePage"
+import Login from "../Components/LoginPage/Login"
+import NavigationBar from "../Components/Navbar"
+import Navbar from "../Components/Navbar/Navbar"
+import Register from "../Components/RegistrationPage/Register"
+import { PrivateRoute } from "./PrivateRoute"
 
-const Routes = (props) => {
-    return (
-        <div>
-            <Route path="/" exact component={HomePage} />
-            <Route path="/:name" exact {...props} component={CardDetails} />
-        </div>
-    );
+class Routes extends Component {
+    render(){
+        return (
+            <div>
+                <Route path="/login" exact render = {()=><Login />} />
+    
+                <Route path="/reg"  exact render = {(props)=><Register {...props}/>} />
+                 <PrivateRoute path="/"  Component={Navbar}/>
+                 {/* <PrivateRoute path="/"  Component={NavigationBar}/> */}
+                
+                <Switch>
+                    <Route  path="/" exact render={()=><HomePage/>}/>
+                    <PrivateRoute  path="/crowdfunding/fundraisers" exact Component={DonatePage}/>
+                    <PrivateRoute  path="/fundraisers/:support_name" exact Component={ViewFund}/>
+                </Switch>
+            </div>
+        )
+    }
 }
 
-export default Routes;
-
-
+export {Routes}
