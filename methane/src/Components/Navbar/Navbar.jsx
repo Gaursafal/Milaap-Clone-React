@@ -19,7 +19,11 @@ const NavBarWrapper = styled.div`
 
 `
 const NavLeft = styled.div`
-    padding: 10px;
+    padding: 20px;
+
+    &.navleft > * {
+        padding-right: 20px;
+    }
 `
 
 const RightLink = styled.div`
@@ -32,8 +36,15 @@ const RightLink = styled.div`
     }
     &.rightlink > div{
         margin-left: -22px;
-        
-        
+    }
+    &.rightlink > * > div {
+        background-color: #9c3353;
+        padding: 10px 40px 10px 40px;
+        color: white;
+        border-radius:30px;
+        margin-right: 100px;
+        margin-top: -10px;
+        font-size: 20px
     }
 `
 
@@ -66,14 +77,15 @@ class Navbar extends React.Component {
         const {loggedUserData} = this.context
         return (
             <NavBarWrapper className="navbar" >
-             
-                 
-                <NavLeft>
-                     <Link to="/"><img src="https://assets.milaap.org/assets/milaap-logo-tiny-e1fe9eb152a9ab7297c3f9a194868904352a9fa2f19781ad8b39e4e18a372264.png" alt=""/></Link>
+                <NavLeft className="navleft" >
+                    <Link to="/">
+                        <img src="https://assets.milaap.org/assets/milaap-logo-tiny-e1fe9eb152a9ab7297c3f9a194868904352a9fa2f19781ad8b39e4e18a372264.png" alt="logo" />
+                    </Link>
                     {links.map((link) => (
                         <NavLink
-                        style={{ padding: "20px" }}
-                        activeStyle={{ backgroundColor:"#9c3353"}}
+                        exact
+                        style={{ padding: 20}}
+                        activeStyle={{ backgroundColor:"#9c3353", color:"white"}}
                         key={link.to}
                         to={link.to}
                         >
@@ -96,6 +108,10 @@ class Navbar extends React.Component {
                     />
                     {loggedUserData.username}
                     </div>
+                    <Link to="/login">
+                        <img src="https://assets.milaap.org/assets/header/user-icon-dfb080c6054d6a209639e60bd2bc033a2b79a8528da7131a2f118b92dd5589ae.png" alt=""/>
+                    </Link>
+                    
                 </RightLink>
             </NavBarWrapper>
         );

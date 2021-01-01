@@ -1,0 +1,61 @@
+.background{
+    background-color: #9c3353;
+    margin: 0 20px 0 20px;
+    color: white;
+    padding-top: 100px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.btndiv{
+    width: 300px;
+    margin: auto;
+}
+
+.btn{
+    background-color: #9c3353;
+    color: white;
+    border: none;
+    padding: 10px 60px 10px 60px;
+    border-radius: 30px;
+}
+
+.innerbg{
+    width: 40%;
+    padding: 30px 100px 30px 100px;
+    background-color: white;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    margin: auto;
+}
+
+.innerdiv{
+    width: 500px;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.mybtn{
+    background-color: #9c3353;
+    border: none;
+    box-shadow: rgba(156, 51, 83, 0.2) 0px 0px 6px 0px;
+    border-radius: 25px;
+    font-family: AvenirLTPro-Medium;
+    font-size: 20px;
+    line-height: 36px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    color: white;
+    padding: 5px 20px 5px 20px;
+}
+
+.innerdiv > p:nth-child(1) {
+    font-size: 35px;
+    text-align: left;
+}
+
+.innerdiv > p:nth-child(2) {
+    font-size: 25px;
+    text-align: left;
+    margin-top: -15px;
+}

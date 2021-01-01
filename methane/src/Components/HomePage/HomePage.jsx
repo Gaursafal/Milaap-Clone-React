@@ -1,15 +1,22 @@
 import React, { Component } from 'react';
 import styles from './HomePage.module.css'
 import SearchIcon from '@material-ui/icons/Search';
-import data from './data.json'
 import {Link} from 'react-router-dom'
-// import ReactPlayer from 'react-player'
+import { DataContext } from '../../Context/DataContextProvider';
 
 class HomePage extends Component {
-
+    constructor(props){
+        super(props)
+        this.state={
+            
+        }
+    }
     
     render() {
+        const {fundData} = this.context
         
+        // const {url} = this.props.match
+        // console.log(url)
         return (
         <div>
             <div className="row">
@@ -88,10 +95,11 @@ class HomePage extends Component {
                     <div class="collapse" id="collapseExample">
                     <div className="row">
                     {
-                        data.map((item)=> (
+                        fundData?.map((item)=> (
                         <div className="col-4">
+                            <Link to={`/${item.id}`} >
                             <div className="card card-body">
-                                <img src={item.img} width="400px" alt=""/>
+                                <img src={item.img[0]} width="400px" alt=""/>
                                 <div className={styles.createdby} >
                                     <div>
                                         <p>created by</p>
@@ -102,6 +110,7 @@ class HomePage extends Component {
                                     </div>
                                 </div>
                             </div>
+                            </Link>
                         </div>
                         ))
                     }
@@ -110,10 +119,10 @@ class HomePage extends Component {
                     <div class="collapse" id="collapseExample1">
                     <div className="row">
                     {
-                        data.map((item)=> (
+                        fundData.map((item)=> (
                             <div className="col-4">
                                 <div className="card card-body">
-                                    <img src={item.img} width="400px" alt="" />
+                                    <img src={item.img[0]} width="400px" alt="" />
                                     <div className={styles.createdby} >
                                         <div>
                                             <p>created by</p>
@@ -133,10 +142,10 @@ class HomePage extends Component {
                     <div class="collapse" id="collapseExample2">
                     <div className="row">
                     {
-                        data.map((item)=> (
+                        fundData.map((item)=> (
                             <div className="col-4">
                                 <div className="card card-body">
-                                    <img src={item.img} width="400px" alt="" />
+                                    <img src={item.img[0]} width="400px" alt="" />
                                     <div className={styles.createdby} >
                                         <div>
                                             <p>created by</p>
@@ -227,4 +236,7 @@ class HomePage extends Component {
         );
     }
 }
+
+HomePage.contextType = DataContext
+
 export default HomePage
