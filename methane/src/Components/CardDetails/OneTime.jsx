@@ -1,40 +1,39 @@
 import React from 'react';
+import styles from './OneTime.module.css'
 
 const OneTime = () => {
     return (
         <div>
-            <div style={{backgroundColor:"#9c3353", height:"100px"}} >
+            <div className={styles.currency}>
                 <div>
                     <div>Currency</div>
-                    <input/>
+                    <input placeholder="INR" />
                 </div>
                 <div>
                     <div>Amount</div>
-                    <input/>
+                    <input placeholder="2500" />
                 </div>
             </div>
-            <p>Milaap charges NO fees. We rely on donors like you to cover for our expenses. Kindly consider a tip. Thank you 🙏
+            <p className={styles.milaap} >Milaap charges NO fees. We rely on donors like you to cover for our expenses. Kindly consider a tip. Thank you 🙏
             </p>
-            <div>
-                <div>include a tip of</div>
+            <div className={styles.tip} >
+                <div>Include a tip of</div>
                 <div>
                     <select>
                         <option>12%(Rs.300) </option>
                     </select>
                 </div>
             </div>
-            <div>Donate using</div>
+            <div className={styles.donate} >Donate using</div>
+            <div className={styles.net} >
             <div>Netbanking, Credit/Debit Cards & more</div>
             <div>Pay using PayTM</div>
             <div>Pay using any of UPI apps or Scan QR</div>
             <div>Make Direct Bank Transfer (NEFT/RTGS/IMPS)
                 Bank Account details and instructions are provided in the next step
             </div>
-            <div>
-                <input placeholder="Name" />
-                <input placeholder="Mobile number/Email id" />
             </div>
-            <button>Continue to pay Rs.2800</button>
+            <button className={styles.contbtn} >Continue to pay Rs.2800</button>
         </div>
     );
 }

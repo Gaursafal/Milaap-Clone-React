@@ -36,10 +36,23 @@ class CardDetails extends Component {
             <div>
                 <p className={styles.border} >Milaap will not charge any fee on your donation to this campaign.</p>
                 <p className={styles.life}>SAVING MY FRIENDS LIFE. HELP FOR RAMIT ROY</p>
+                <div className={styles.facebook}>
+                    <div>
+                        <p className={styles.bold}>32 </p>
+                        <p>shares</p>
+                    </div>
+                    <div className={styles.fac} >
+                        
+                        <p>Share on Facebook</p>
+                    </div>
+                    <div className={styles.wats} >
+                        <p>Share on Whatsapp</p>
+                    </div>
+                </div>
             </div>
                 <div className="row">
                     <div className="col-lg-8 col-md-8 col-sm-12">
-                        <div>
+                        <div className={styles.paddin}>
                             <img src="https://images.milaap.org/milaap/image/upload/v1608189362/production/images/campaign/238295/IMG-20201217-WA0080_rdk4ax_1608189366.jpg?crop=faces&enhance=true&format=jpg&height=452&mode=crop&width=603" width="100%" />
                         </div>
                         <div>
@@ -77,6 +90,11 @@ class CardDetails extends Component {
                         <div className={styles.raised} >
                             <div>Rs.2,257,613</div>
                             <p>raised</p>
+                        </div>
+                        <div>
+                        <div className="progress">
+                            <div className="progress-bar bg-danger w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
                         </div>
                         <div className={styles.goal}>
                             <div>Goal: 3000000 </div>

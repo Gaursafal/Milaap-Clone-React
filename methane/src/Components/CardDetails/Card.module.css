@@ -2,6 +2,24 @@
     display: flex;
 }
 
+.btn {
+    display: flex;
+    
+}
+
+.btn > div {
+    padding-right: 72px;
+    padding-left: 72px;
+    border: 1px solid #b91141;
+}
+
+.btn > div > button {
+    background-color: white;
+    outline: none;
+    border: none;
+    font-size: 20px;
+}
+
 .border{
     border: 1px solid grey;
     margin-bottom: 25px;
@@ -24,21 +42,21 @@
 
 .scan {
     text-align: center;
-    color: red;
+    color: #b91141;
     padding: 10px;
 }
 
 .download{
     padding: 10px;
     text-align: center;
-    color: red;
+    color: #b91141;
 }
 
 .generate{
-    border: 1px solid red;
+    border: 1px solid #b91141;
     width: 150px;
     margin: auto;
-    color: red;
+    color: #b91141;
     padding: 5px 10px 5px 10px;
     text-align: center;
 }

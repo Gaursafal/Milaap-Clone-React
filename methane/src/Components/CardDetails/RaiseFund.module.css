@@ -1,46 +1,105 @@
-.btn{
-    width: 100%;
-    color: red;
-    border: 1px solid red;
+.btn {
+  width: 100%;
+  color: red;
+  border: 1px solid red;
 }
 
-.name{
-    background-color: white;
-    border-radius: 30px;
+.option {
+    display: flex;
+}
+
+.rupees > select{
     padding: 10px;
-    text-align: center;
+    margin-right: 10px;
 }
 
-.most {
+.place > input {
+    border: 1px solid black;
+    width: 470px;
+}
+
+.name {
+  background-color: white;
+  border-radius: 40px;
+  padding-right: 10px;
+  text-align: center;
+  width: 60px;
+}
+
+.org > input{
+    width: 540px;
+    border: 1px solid black;
+}
+
+.org > input::placeholder{
+    color: grey;
+}
+
+.modalcard > button{
+    width: 320px;
+    margin: 30px 80px 10px 90px;
+    color: white;
+    font-size: 20px;
+    background-color:  #b91141;
+}
+
+.fundr{
+    padding: 10px;
     font-size: 20px;
 }
 
-.bg{
-    background-color: grey;
-    padding: 5px;
-    margin-top: 10px;
+.most {
+  font-size: 20px;
 }
 
-.bg > div:nth-child(1){
-    padding: 5px;
+.sname {
+  background-color: white;
+  border-radius: 40px;
+  padding-top: 20px;
+  text-align: center;
+  width: 70px;
 }
 
-.pname{
-    text-align: left;
+.bg {
+  background-color: rgb(212, 210, 210);
+  padding: 5px;
+  margin-top: 10px;
+  height: 150px;
+}
+
+.flex {
+  display: flex;
+  padding: 10px;
+}
+
+.flex > * {
+  padding: 10px;
+}
+
+p {
+  font-size: 15px;
+}
+
+.bg > div:nth-child(1) {
+  padding: 5px;
+}
+
+.pname {
+  text-align: left;
 }
 
 .pname > p:nth-child(2) {
-    margin-top: -30px;
-    font-size: 15px;
+  margin-top: -20px;
+  font-size: 15px;
 }
 
-.flex{
-    display: grid;
-    grid-template-columns: 1fr 5fr;
+.benificiary {
+  margin-top: 20px;
+  background-color: rgb(212, 210, 210);
+  padding: 5px;
 }
 
-.benificiary{
-    margin-top: 20px;
-    background-color: grey;
-    padding: 5px;
+.support {
+  font-size: 20px;
+  padding-top: 20px;
 }
