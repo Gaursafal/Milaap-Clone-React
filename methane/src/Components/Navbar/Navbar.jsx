@@ -3,6 +3,7 @@ import {  NavLink, Link } from "react-router-dom";
 import styled from 'styled-components';
 import { DataContext } from "../../Context/DataContextProvider";
 import SimpleMenu from "../DonatePage/SimpleMenu";
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 
 const NavBarWrapper = styled.div`
     overflow:hidden;
@@ -92,12 +93,16 @@ class Navbar extends React.Component {
                         {link.title}
                         </NavLink>
                     ))}
-             </NavLeft>
+                </NavLeft>
                 
                 <RightLink className="rightlink" >
                     
                     <Link to="/start" >
                         <div>Start a fundraiser</div>
+                    </Link>
+
+                    <Link to="/cart" >
+                        <ShoppingCartIcon/>
                     </Link>
                     {/* <Link to="/login">
                         <img src="https://assets.milaap.org/assets/header/user-icon-dfb080c6054d6a209639e60bd2bc033a2b79a8528da7131a2f118b92dd5589ae.png" />

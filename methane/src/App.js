@@ -8,8 +8,8 @@ import CardDetails from './Components/CardDetails/CardDetails'
 function App() {
   return (
     <div className="App">
-      {/* <Routes/> */}
-      <CardDetails/>
+      <Routes/>
+      {/* <CardDetails/> */}
     </div>
   );
 }
