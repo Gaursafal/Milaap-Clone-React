@@ -13,11 +13,16 @@ class DataContextProvider extends Component{
             loggedUserData:null,
             fundData:[],
             userData:null,
+            lendData:[],
+            cartArray:[]
         }
     }
 
     authenticateUser=(data) =>{
         console.log(data)
+        this.setState({
+            isLoading:true
+        })
         let { email, password } = data;
         let { usersData } = this.state;
         let auth = false;
@@ -28,7 +33,7 @@ class DataContextProvider extends Component{
                   console.log("looged")
                     this.setState({
                         isAuth: true,
-                        //add this
+                        isLoading:false,
                         loggedUserData:usersData[i]
                     }); 
                     auth = true   
@@ -66,13 +71,13 @@ class DataContextProvider extends Component{
                 });
             })
 
-            .catch((err) =>
+            .catch(() =>
                 this.setState({
                     error: true,
                     isLoading: false,
                 })
             );
-            
+           
     }
 
 
@@ -91,7 +96,7 @@ class DataContextProvider extends Component{
             })
            
         })
-        .then(err => {
+        .then(() => {
             this.setState({
                 error:true
             })
@@ -100,11 +105,54 @@ class DataContextProvider extends Component{
         
     }
 
+    getDonateId = (id) => {
+        const { fundData } = this.state;
+        const newData = fundData.find((item) => item.support_name === id);
+        return newData;
+    };
+
+    getLendData = () =>{
+        this.setState({
+            isLoading:true
+        })
+        axios({
+            url:"http://localhost:3004/fundDetails"
+        })
+        .then(res => {
+            this.setState({
+                isLoading:false,
+                lendData:res.data
+            })
+           
+        })
+        .then(() => {
+            this.setState({
+                error:true
+            })
+           
+        })
+    }
+    handleLogOut = () =>{
+        this.setState({
+            isAuth:false
+        })
+    }
+    addToCart = (id) =>{
+        const {lendData} = this.state
+        //console.log(lendData)
+        const {cartArray} = this.state
+        const newData = lendData.find((item)=>item.lend_id===id)
+        //console.log(newData)
+        this.setState({
+            cartArray:[...cartArray,newData]
+        })
+    }
+
     render(){
-        const {isAuth,isLoading,error,fundData,loggedUserData,usersData} = this.state
-        console.log(usersData,loggedUserData)
-        const {authenticateUser,getDonateData} = this
-        const value = {authenticateUser,getDonateData, isAuth,isLoading,error,fundData,loggedUserData,usersData}
+        const {isAuth,isLoading,error,fundData,loggedUserData,usersData,lendData,cartArray} = this.state
+       // console.log(usersData,loggedUserData,lendData)
+        const {authenticateUser,getDonateData,getDonateId,getLendData,handleLogOut,addToCart} = this
+        const value = {authenticateUser,getDonateData,getDonateId,getLendData,handleLogOut,addToCart, isAuth,isLoading,error,fundData,loggedUserData,usersData,lendData,cartArray}
         return(
             <DataContext.Provider value={value}>
                 {this.props.children}

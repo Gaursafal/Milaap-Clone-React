@@ -75,7 +75,7 @@ const links = [
 
 class Navbar extends React.Component {
     render(){
-        const {loggedUserData} = this.context
+        const {loggedUserData,handleLogOut} = this.context
         return (
             <NavBarWrapper className="navbar" >
                 <NavLeft className="navleft" >
@@ -100,24 +100,28 @@ class Navbar extends React.Component {
                     <Link to="/start" >
                         <div>Start a fundraiser</div>
                     </Link>
-
+                    
                     <Link to="/cart" >
                         <ShoppingCartIcon/>
                     </Link>
-                    {/* <Link to="/login">
-                        <img src="https://assets.milaap.org/assets/header/user-icon-dfb080c6054d6a209639e60bd2bc033a2b79a8528da7131a2f118b92dd5589ae.png" />
-                    </Link> */}
-                    
-
                     <div style={{margin:"auto"}}>
                     <SimpleMenu 
                         username={loggedUserData.username}
                         avatar={loggedUserData.avatar_img}
                         history={this.props.history}
+                        handleLogout = {handleLogOut}
                     />
                     {loggedUserData.username}
                     </div>
+                    
+                  
+                   
+                    
                 </RightLink>
+                
+                <img src="https://static.thenounproject.com/png/7352-200.png" alt=""/>
+                   
+              
             </NavBarWrapper>
         );
     }

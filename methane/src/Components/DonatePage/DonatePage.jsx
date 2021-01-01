@@ -129,21 +129,6 @@ class DonatePage extends Component {
             </Grid>
           </Container>
         </main>
-        {/* Footer */}
-        <footer className={styles.footer}>
-          <Typography variant="h6" align="center" gutterBottom>
-            Footer
-          </Typography>
-          <Typography
-            variant="subtitle1"
-            align="center"
-            color="textSecondary"
-            component="p"
-          >
-            Footer
-          </Typography>
-        </footer>
-        {/* End footer */}
       </React.Fragment>
     );
   }

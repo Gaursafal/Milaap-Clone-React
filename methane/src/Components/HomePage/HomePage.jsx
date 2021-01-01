@@ -15,8 +15,9 @@ class HomePage extends Component {
     
     render() {
         const {fundData} = this.context
-        console.log(fundData)
-        console.log(this.context)
+        
+        // const {url} = this.props.match
+        // console.log(url)
         return (
         <div>
             <div className="row">
@@ -185,4 +186,5 @@ class HomePage extends Component {
 }
 
 HomePage.contextType = DataContext
+
 export default HomePage

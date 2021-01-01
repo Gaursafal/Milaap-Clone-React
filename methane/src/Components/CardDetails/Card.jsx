@@ -82,10 +82,10 @@ class Card extends Component {
                     
                     <div className={styles.scan} >scan and donate with any app</div>
                     <div className={styles.icon} >
-                        <img src="https://cdn.iconscout.com/icon/free/png-512/bhim-3-69845.png" width="40px" />
-                        <img src="https://www.searchpng.com/wp-content/uploads/2019/02/Google-Pay-Logo-Icon-PNG.png" width="40px" />
-                        <img src="https://cdn.iconscout.com/icon/free/png-512/paytm-226448.png" width="40px" />
-                        <img src="https://www.searchpng.com/wp-content/uploads/2018/11/phone-pe.png" width="40px" />
+                        <img src="https://cdn.iconscout.com/icon/free/png-512/bhim-3-69845.png" width="40px" alt="" />
+                        <img src="https://www.searchpng.com/wp-content/uploads/2019/02/Google-Pay-Logo-Icon-PNG.png" width="40px" alt="" />
+                        <img src="https://cdn.iconscout.com/icon/free/png-512/paytm-226448.png" width="40px" alt=""/>
+                        <img src="https://www.searchpng.com/wp-content/uploads/2018/11/phone-pe.png" width="40px" alt=""/>
                     </div>
                     <div className={styles.download} >download payment receipt</div>
                 </div>

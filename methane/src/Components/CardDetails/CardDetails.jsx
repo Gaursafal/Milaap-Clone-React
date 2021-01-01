@@ -7,17 +7,31 @@ import { Modal, Button } from 'antd';
 import RaiseFund from './RaiseFund'
 
 class CardDetails extends Component {
+    constructor(props){
+        super(props)
+        this.state = {
+            visible: false,
+            fundData:[]
+        };
+    }
+
+    componentDidMount(){
+        console.log(this.props)
+        const {getDonateId} = this.context
+        this.setState({
+            fundData:getDonateId(this.props.match.params.support_name)
+        });
+        
+    }
 
     // modals code
-        state = {
-            visible: false,
-        };
+      
         
-        showModal = () => {
-            this.setState({
+    showModal = () => {
+        this.setState({
             visible: true,
-            });
-        };
+        });
+    };
         
         handleOk = () => {
             this.setState({
@@ -30,7 +44,10 @@ class CardDetails extends Component {
         };
     
     render() {
-        const { visible } = this.state;
+        const { visible,fundData } = this.state;
+        console.log(fundData)
+        const {img,story} = fundData
+
         return (
         <div className={styles.main}>
             <div>
@@ -52,8 +69,8 @@ class CardDetails extends Component {
             </div>
                 <div className="row">
                     <div className="col-lg-8 col-md-8 col-sm-12">
-                        <div className={styles.paddin}>
-                            <img src="https://images.milaap.org/milaap/image/upload/v1608189362/production/images/campaign/238295/IMG-20201217-WA0080_rdk4ax_1608189366.jpg?crop=faces&enhance=true&format=jpg&height=452&mode=crop&width=603" width="100%" />
+                        <div>
+                            <img src={img} width="100%" alt=""/>
                         </div>
                         <div>
                         <Button className={styles.btn} onClick={this.showModal}>
@@ -76,10 +93,10 @@ class CardDetails extends Component {
                         <div className={styles.story}>
                             <p>Story</p>
                             <hr/>
-                            <p>My friend Ramit Roy, requires to undergo an immediate liver transplant.  His medical condition is very bad. He was all through a brilliant student and had completed his MBA from  Nirma Institute of Management. However, due to his medical condition,  he had lost his job due to the pandemic in feb 2020. He is literally penniless and his family cannot afford his medical treatment.  We would be sincerely grateful if anyone can come forward and help us in saving his life.  He has a small daughter,  wife, aged parents, who are all dependent on him. Please help us to save his life.  </p>
+                            <p>{story}</p>
                             <div className={styles.details} >Details for direct bank transfer / UPI payments</div>
                             <div className={styles.bank} >Bank Account details: 
-                                    <a>click here</a> 
+                                    <p>click here</p> 
                             </div>
                             <div className={styles.donate} >Donate</div>
                             <hr/>
