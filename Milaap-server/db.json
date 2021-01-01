@@ -118,5 +118,22 @@
       "goal": 1800000,
       "img":["https://images.milaap.org/milaap/image/upload/v1608366275/production/images/campaign/238861/cover_photo_m2qbmz_1608366641.jpg?crop=faces&enhance=true&format=jpg&height=452&mode=crop&width=603"]
     }
+  ],
+  "fundDetails":[
+    {
+      "lend_id":1,
+      "name":"Swanalta",
+      "gender":"female",
+      "support_name": "support-basicshit",
+      "title": "Swarnalata Barik And Group",
+      "purpose":"to purchase better crop seeds, fertilizers, herbicides, etc. in order to expand her vegetable selling enterprise",
+      "location":"Puri, Orissa",
+      "story": "Swarnalata (2nd member from left) is a 35-year-old woman from a small village near Cuttack, Odisha. She has a family of 5 and a monthly household income of INR 8,300. She is a hardworking woman engaged in farming activities and selling varieties of vegetables in the market. She produces cauliflower, cabbage, potato, tomato, brinjal, etc. in her field. She wishes to expand her little enterprise so that her household income and savings get a boost and she can contribute more substantially to the household expenses. She has formed an",
+      "raised":581550,
+      "goal": 1800000,
+      "img":"https://images.milaap.org/milaap/image/upload/v1584345617/production/images/loan/a020o000010MT6ZAAW-Enterprisephoto3_1584345615.jpg?crop=faces&format=jpg&height=215&mode=crop&width=320"
+      
+    }
   ]
+
 }

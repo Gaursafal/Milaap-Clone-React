@@ -1,0 +1,98 @@
+.Container{
+    margin-top: 100px;
+    padding-left: 10%;
+}
+
+.top{
+    display: flex;
+    flex-direction: row;
+    margin-top: 3%;
+}
+
+h1, h3{
+    color: rgb(128, 123, 123);
+}
+
+.collapse{
+    width: 270px;
+    height: 190px;
+}
+
+.img{
+    padding: 10px 10px 10px 0px;
+    width: 300px;
+}
+.display{
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+    line-height: 22.16px;
+    text-align: start;
+    letter-spacing: normal;
+    color: #5d5d5d;
+}
+.card{
+    height: 400px;
+    width: 800px;
+    margin: 20px 0px 50px 30px;
+    display : flex; 
+    flex-direction : row
+}
+
+.bar{
+    height: 20px;
+    width: 290px 
+}
+
+.btn{
+    width: 290px;
+    height: 50px;
+    background-color:white;
+    border-color: #b91141;
+    color: #b91141;
+    font-size: 19px;
+    outline: none;
+    font-weight: 600;
+    border: 1px solid #b91141 !important;
+}
+.h1{
+    color: #b91141;
+    font-size: 24px;
+    line-height: 32.16px;
+    text-align: start;
+    letter-spacing: normal;
+
+}
+.purpose{
+    margin-top: 10px;
+    margin-bottom: 15px;
+    color:#5d5d5d;
+}
+.btn1{
+    border: none;
+    background-color: #b91141;
+    color: whitesmoke;
+    width: fit-content;
+    height: 40px;
+    border-radius: 3px;
+    font-size: 16px;
+    
+}
+.input{
+    margin-top: 27px;
+    margin-right: 10px;
+    height: 40px;
+    width: fit-content;
+    border-radius:0px 2px 2px 0px;
+    border-color: #5d5d5d;
+    border: 1px solid #5d5d5d !important;
+    outline: none;
+}
+
+.desc{
+    color:#5d5d5d;
+    font-size: 14px;
+    line-height: 23.8px;
+    text-align: start;
+    letter-spacing: normal;
+}

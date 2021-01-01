@@ -108,11 +108,15 @@ class Navbar extends React.Component {
                     />
                     {loggedUserData.username}
                     </div>
-                    <Link to="/login">
-                        <img src="https://assets.milaap.org/assets/header/user-icon-dfb080c6054d6a209639e60bd2bc033a2b79a8528da7131a2f118b92dd5589ae.png" alt=""/>
-                    </Link>
+                    
+                  
+                   
                     
                 </RightLink>
+                
+                <img src="https://static.thenounproject.com/png/7352-200.png" alt=""/>
+                   
+              
             </NavBarWrapper>
         );
     }

@@ -34,9 +34,9 @@ export default class Login extends React.Component {
         let { isAuth, isLoading , error} = this.context;
         let { email, password,isFound } = this.state;
         return isLoading?(
-        <div class="spinner-border" role="status">
-            <span class="visually-hidden">Loading...</span>
-        </div>
+            <div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>  
         )
         :!isAuth?(
              <> 

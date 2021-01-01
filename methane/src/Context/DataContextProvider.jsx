@@ -18,6 +18,9 @@ class DataContextProvider extends Component{
 
     authenticateUser=(data) =>{
         console.log(data)
+        this.setState({
+            isLoading:true
+        })
         let { email, password } = data;
         let { usersData } = this.state;
         let auth = false;
@@ -28,7 +31,7 @@ class DataContextProvider extends Component{
                   console.log("looged")
                     this.setState({
                         isAuth: true,
-                        //add this
+                        isLoading:false,
                         loggedUserData:usersData[i]
                     }); 
                     auth = true   
