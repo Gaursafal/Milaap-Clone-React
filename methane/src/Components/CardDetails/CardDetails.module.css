@@ -1,11 +1,73 @@
 .border{
-    border: 1px solid red;
+    border: 1px solid #b91141;
+    color: #b91141;
+    padding:10px;
+    font-size: 15px;
 }
 
+.life{
+    text-align: left;
+    font-size: 30px;
+    color: grey;
+    font-weight: bold;
+}
 
+.raised{
+    display: flex;
+}
+
+.bank{
+    font-size: 20px;
+    padding: 10px;
+    border: 1px solid grey;
+}
+
+.story > p {
+    text-align: left;
+    
+}
+
+.donate {
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+.details{
+    padding: 10px;
+    font-size: 25px;
+    border: 1px solid grey;
+}
+
+.story{
+    margin-top: 30px;
+}
+
+.raised > div:nth-child(1){
+    color:#b91141;
+    font-size: 30px;
+    padding-right: 10px;
+}
+
+.raised > div:nth-child(2){
+    margin-top: 10px;
+}
+
+.goal{
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.goal > * {
+    padding-right: 50px;
+    font-size: 15px;
+}
+
+.donate{
+    font-size: 20px;
+}
 
 .border > p {
-    color: red;
+    color: #b91141;
     font-size: 18px;
 }
 
@@ -37,6 +99,24 @@
 .option > div > select {
     padding: 10px;
     
+}
+
+.form {
+    padding-right: 40px;
+}
+
+.form > button {
+    margin: 20px;
+    text-align: center;
+    color: white;
+    background-color: #b91141;
+}
+
+.btn{
+    color: #b91141;
+    border: 1px solid #b91141;
+    width: 200px;
+    padding: 10px;
 }
 
 

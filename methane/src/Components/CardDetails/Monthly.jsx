@@ -37,7 +37,7 @@ const Monthly = () => {
                         checked/>
                 <label for="indian">
                     Indian
-                    <p>Credit Cards (VISA and Mastercard) and Debit Cards (ICICI, Citibank, Canara, Kotak Mahindra)</p>
+                    Credit Cards (VISA and Mastercard) and Debit Cards (ICICI, Citibank, Canara, Kotak Mahindra)
                 </label>
             </div>
             <div className={styles.radio} >
@@ -46,7 +46,7 @@ const Monthly = () => {
                         checked/>
                 <label for="international">
                     International
-                    <p>(Credit / Debit cards issued outside India)</p>
+                    (Credit / Debit cards issued outside India)
                 </label>
             </div>
         </div>

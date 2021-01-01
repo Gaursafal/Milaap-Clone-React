@@ -39,10 +39,10 @@ class Card extends Component {
         const {visible, status} = this.state
         return (
             <div>
-                <div>
+                <div className={styles.border} >
                     <div>
                         {/* modals */}
-                    <Button type="primary" onClick={this.showModal}>
+                    <Button style={{width:"100%", backgroundColor:"#b91141", color:"white"}} onClick={this.showModal}>
                                     Donate now
                                 </Button>
                             <Modal
@@ -52,10 +52,10 @@ class Card extends Component {
                                 onCancel={this.handleCancel}
                                 footer={null}
                                 >
-                                <div  >
+                                <div>
                                     <h3>Make a secure donation </h3>
                                     <hr/>
-                                    <div>
+                                    <div className={styles.btn}>
                                         <button onClick={this.handleClick} >one Time</button>
                                         <button onClick={this.handleClick}>Monthly</button>
                                     </div>
@@ -65,15 +65,18 @@ class Card extends Component {
                                 </div>
                                 </Modal>
                     </div>
-                    <div>Generate QR</div>
-                    <div>scan and donate with any app</div>
-                    <div>
+                    <div className={styles.gen}>
+                        <div className={styles.generate}>Generate QR</div>
+                    </div>
+                    
+                    <div className={styles.scan} >scan and donate with any app</div>
+                    <div className={styles.icon} >
                         <img src="https://cdn.iconscout.com/icon/free/png-512/bhim-3-69845.png" width="40px" />
                         <img src="https://www.searchpng.com/wp-content/uploads/2019/02/Google-Pay-Logo-Icon-PNG.png" width="40px" />
                         <img src="https://cdn.iconscout.com/icon/free/png-512/paytm-226448.png" width="40px" />
                         <img src="https://www.searchpng.com/wp-content/uploads/2018/11/phone-pe.png" width="40px" />
                     </div>
-                    <div>download payment receipt</div>
+                    <div className={styles.download} >download payment receipt</div>
                 </div>
             </div>
         );
