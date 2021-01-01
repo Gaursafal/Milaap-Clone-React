@@ -1,12 +1,11 @@
 import React from  "react"
 import './App.css';
-import LendPage from "./Components/LendPage/LendPage";
-//import Register from "./Components/RegistrationPage/Register"
+import SuccessStory from "./Components/SuccessStory/SuccessStory";
 
 function App() {
   return (
     <div className="App">
-      <LendPage/>
+      <SuccessStory/>
     </div>
   );
 }
