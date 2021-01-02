@@ -64,8 +64,8 @@ const links = [
         title: "Lend"
     },
     {
-        to: "/pricing",
-        title: "Pricing"
+        to: "/story",
+        title: "Success Story"
     },
     {
         to: "/contact-us",
