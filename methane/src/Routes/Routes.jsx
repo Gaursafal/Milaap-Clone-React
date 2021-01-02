@@ -11,6 +11,7 @@ import Login from "../Components/LoginPage/Login"
 import Navbar from "../Components/Navbar/Navbar"
 import Register from "../Components/RegistrationPage/Register"
 import StartFundraiser from "../Components/StartFundraiser/StartFundraiser"
+import SuccessStory from "../Components/SuccesStory/SuccessStory"
 import { PrivateRoute } from "./PrivateRoute"
 
 class Routes extends Component {
@@ -25,11 +26,12 @@ class Routes extends Component {
                 
                 <Switch>
                     <Route  path="/" exact render={()=><HomePage/>}/>
-                    <PrivateRoute  path="/crowdfunding/fundraisers" exact Component = {DonatePage}/>
-                    <PrivateRoute  path="/fundraisers/:support_name" exact Component = {CardDetails}/>
-                    <PrivateRoute  path="/lend" exact Component = {LendPage}/>
-                    <PrivateRoute  path="/cart" exact Component = {Cart}/>
-                    <PrivateRoute  path="/start" exact Component = {StartFundraiser}/>
+                    <PrivateRoute  path="/crowdfunding/fundraisers" exact Component={DonatePage}/>
+                    <PrivateRoute  path="/fundraisers/:support_name" exact Component={CardDetails}/>
+                    <PrivateRoute  path="/lend" exact Component={LendPage}/>
+                    <PrivateRoute  path="/cart" exact Component={Cart}/>
+                    <PrivateRoute path="/story" exact Component={SuccessStory} />
+                    <PrivateRoute path="/start" exact Component={StartFundraiser}/>
                 </Switch>
                 <PrivateRoute path="/"  Component={Footer}/>
             </div>

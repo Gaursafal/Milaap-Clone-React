@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-
+import {v4 as uuid} from "uuid"
 export const DataContext = React.createContext();
 
 class DataContextProvider extends Component {
@@ -139,26 +139,55 @@ class DataContextProvider extends Component {
     });
   };
   
-  createFundData=({fund_id,full_name,gender,age,story,title,goal})=>{
-    axios({
-        method:"post",
-        url:"http://localhost:3004/fundraise",
-        data:{
-            fund_id,
-            name:full_name,
-            support_name: "Education purpose",
-            gender,
-            title,
-            shares: 0,
-            story,
-            supporters: 0,
-            raised:0,
-            goal,
-            img:"https://images.milaap.org/milaap/image/upload/v1608366275/production/images/campaign/238861/cover_photo_m2qbmz_1608366641.jpg?crop=faces&enhance=true&format=jpg&height=452&mode=crop&width=603"
-        }
-      })
-      .then(res=>console.log(res))
+  createFundData=({full_name,gender,age,story,title,goal})=>{
+        console.log(full_name,gender,age,story,title,goal)
+       
+        
+        this.setState({
+            isLoading: true,
+        });
+
+        axios
+            .post("http://localhost:3004/fundraise",{
+                    name:full_name,
+                    support_name: "Education purpose",
+                    gender,
+                    title,
+                    shares: 0,
+                    story,
+                    supporters: 0,
+                    raised:0,
+                    goal,
+                    img:"https://images.milaap.org/milaap/image/upload/v1608366275/production/images/campaign/238861/cover_photo_m2qbmz_1608366641.jpg?crop=faces&enhance=true&format=jpg&height=452&mode=crop&width=603"
+                
+            })
+            .then((res) => {
+                this.setState({
+                    isLoading: false,
+                    error: false,
+                });
+              
+            })
+            .catch((err) => {
+                this.setState({
+                    error: true,
+                    isLoading: false,
+                });
+            });
    }
+//    {
+//     fund_id,
+//     name:full_name,
+//     support_name: "Education purpose",
+//     gender,
+//     title,
+//     shares: 0,
+//     story,
+//     supporters: 0,
+//     raised:0,
+//     goal,
+//     img:"https://images.milaap.org/milaap/image/upload/v1608366275/production/images/campaign/238861/cover_photo_m2qbmz_1608366641.jpg?crop=faces&enhance=true&format=jpg&height=452&mode=crop&width=603"
+// }
   render() {
     const {
       isAuth,

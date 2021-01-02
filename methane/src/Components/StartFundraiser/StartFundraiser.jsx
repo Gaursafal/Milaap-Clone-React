@@ -28,9 +28,9 @@ class StartFundraiser extends Component {
         e.preventDefault()
         const {full_name,gender,age,story,title,goal} = this.state;
         const {createFundData} = this.context
-        let fund_id = uuid()
-        console.log(fund_id)
-        createFundData({fund_id,full_name,gender,age,story,title,goal})
+        //const fund_id = uuid()
+        //console.log(fund_id)
+        createFundData({full_name,gender,age,story,title,goal})
     }
 
 
