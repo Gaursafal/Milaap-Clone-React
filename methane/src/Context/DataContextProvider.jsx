@@ -77,7 +77,7 @@ class DataContextProvider extends Component{
                     isLoading: false,
                 })
             );
-           
+        
     }
 
 

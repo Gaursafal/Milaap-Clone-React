@@ -4,11 +4,12 @@ import styles from './HomePage.module.css'
 
 const FundData = ({fundData}) => {
     return (
-        <div>
+        <div className="row">
         {
-                        fundData.map((item)=> (
-                        <div className="col-4">
-                            <Link to={`/${item.id}`} >
+            fundData.map((item)=> (
+                        <div className="col-lg-4 col-md-6">
+                            
+                            <Link style={{textDecoration:"none"}} to={`fundraisers/${item.support_name}`}>
                             <div className="card card-body">
                                 <img src={item.img[0]} width="400px" alt=""/>
                                 <div className={styles.createdby} >
@@ -22,6 +23,7 @@ const FundData = ({fundData}) => {
                                 </div>
                             </div>
                             </Link>
+                            
                         </div>
                         ))
                     }
