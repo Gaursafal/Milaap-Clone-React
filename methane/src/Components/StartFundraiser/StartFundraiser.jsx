@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { DataContext } from '../../Context/DataContextProvider';
 //import '../../App.css'
 import styles from './StartFundraiser.module.css'
-import {v4 as uuid} from "uuid"
+
 
 class StartFundraiser extends Component {
     constructor(props){
