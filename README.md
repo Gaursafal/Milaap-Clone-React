@@ -22,7 +22,7 @@
 ![Screenshot from 2021-01-02 19-38-02](https://user-images.githubusercontent.com/61466065/103459058-6568c280-4d32-11eb-9933-61b41719d722.png)
 
 ## `Donate Page`
-[Screenshot from 2021-01-02 19-38-31](https://user-images.githubusercontent.com/61466065/103459078-88937200-4d32-11eb-8c1a-97063302733e.png)
+![Screenshot from 2021-01-02 19-38-31](https://user-images.githubusercontent.com/61466065/103459078-88937200-4d32-11eb-8c1a-97063302733e.png)
 
 ## `Lend Page`
 ![Screenshot from 2021-01-02 19-38-49](https://user-images.githubusercontent.com/61466065/103459079-8a5d3580-4d32-11eb-98a3-833bb06179be.png)
