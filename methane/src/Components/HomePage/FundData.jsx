@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 import styles from './HomePage.module.css'
 
 const FundData = ({fundData}) => {
+    console.log(fundData)
     return (
         <div className="row">
         {
@@ -11,7 +12,7 @@ const FundData = ({fundData}) => {
                             
                             <Link style={{textDecoration:"none"}} to={`fundraisers/${item.support_name}`}>
                             <div className="card card-body">
-                                <img src={item.img[0]} width="400px" alt=""/>
+                                <img src={item.img} width="400px" alt=""/>
                                 <div className={styles.createdby} >
                                     <div>
                                         <p>created by</p>

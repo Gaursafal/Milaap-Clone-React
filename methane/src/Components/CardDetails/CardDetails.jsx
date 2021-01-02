@@ -47,6 +47,7 @@ class CardDetails extends Component {
         const { visible,fundData } = this.state;
         console.log(fundData)
         const {img,story} = fundData
+        console.log(img)
 
         return (
         <div className={styles.main}>

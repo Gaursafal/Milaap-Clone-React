@@ -28,6 +28,7 @@
 .currency > div > input {
     border-bottom: 1px solid white;
     background-color: #b91141;
+    width: fit-content;
 }
 
 .currency > div > * {

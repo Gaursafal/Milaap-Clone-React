@@ -64,8 +64,8 @@ const links = [
         title: "Lend"
     },
     {
-        to: "/pricing",
-        title: "Pricing"
+        to: "/story",
+        title: "Success Story"
     },
     {
         to: "/contact-us",
@@ -100,7 +100,7 @@ class Navbar extends React.Component {
                     <Link to="/start" >
                         <div>Start a fundraiser</div>
                     </Link>
-                    
+                      
                     <Link to="/cart" >
                         <ShoppingCartIcon/>
                     </Link>
