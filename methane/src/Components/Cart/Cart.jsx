@@ -8,7 +8,7 @@ class Cart extends Component{
         const {cartArray}  = this.context
         return(
             <div style={{margin:"100px 100px"}} >
-                <h3>Lend COmpleted</h3>
+                <h3 style={{textAlign:"center"}} >Cart</h3>
                 {
                     cartArray?.map((item)=>{
                         return(
