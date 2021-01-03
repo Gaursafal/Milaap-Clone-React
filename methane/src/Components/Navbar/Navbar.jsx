@@ -114,8 +114,6 @@ class Navbar extends React.Component {
                     {loggedUserData.username}
                     </div>
                     
-                  
-                   
                     
                 </RightLink>
                 

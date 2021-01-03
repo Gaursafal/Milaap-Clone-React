@@ -61,7 +61,7 @@ class Card extends Component {
                                 <div>
                                     <h3>Make a secure donation </h3>
                                     <hr/>
-                                    <div className={styles.btn}>
+                                    <div className={styles.modalbtn}>
                                         <div>
                                             <button  onClick={this.handleClick} >one Time</button>
                                         </div>

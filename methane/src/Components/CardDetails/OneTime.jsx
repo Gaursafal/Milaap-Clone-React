@@ -7,7 +7,7 @@ const OneTime = () => {
             <div className={styles.currency}>
                 <div>
                     <div>Currency</div>
-                    <input placeholder="INR" />
+                    <input placeholder="INR" style={{width:"fit-content"}} />
                 </div>
                 <div>
                     <div>Amount</div>

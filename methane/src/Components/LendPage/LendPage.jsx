@@ -20,7 +20,8 @@ class LendPage extends Component {
         super(props)
         this.state = {
             lendData :[],
-            lendInput:2500.00
+            lendInput:2500.00,
+            filterData:""
         }
     }
     componentDidMount(){
@@ -42,15 +43,20 @@ class LendPage extends Component {
     completeLoan = (id) =>{
         console.log(id,"complete")
         const {addToCart} = this.context
-         addToCart(id)
-        
-    
+        addToCart(id)
+    }
+
+    handleChange = (e) => {
+        const {name, value} = e.target
+        this.setState({
+            [name]: value
+        })
     }
 
     render() {
         const {lendData} = this.context
         //console.log(cartArray)
-        const {lendInput} = this.state
+        const {lendInput, filterData} = this.state
         const { Panel } = Collapse;
         return (
             <div>
@@ -60,12 +66,12 @@ class LendPage extends Component {
                     <div className={styles.top}>
                         <p>Filter By </p>
                         <h3 style={{ padding: "0.5% 1% 0% 60%" }}>Sort By</h3>
-                        <select >
+                        <select name="filterData" onChange={this.handleChange} value={filterData} >
                             <option>Popularity</option>
-                            <option>Expirey</option>
-                            <option>Pending Amount</option>
-                            <option>Recent</option>
-                            <option>Interest Rate</option>
+                            <option value="expiry" >Expirey</option>
+                            <option value="pending" >Pending Amount</option>
+                            <option value="recent">Recent</option>
+                            <option value="interest">Interest Rate</option>
                         </select>
                         <button style={{ backgroundColor: "white" }}><SortIcon /></button>
                     </div>
@@ -116,28 +122,28 @@ class LendPage extends Component {
 
                         {/* Card Start */}
                         <div>
-                            {
-                                lendData?.map((item)=>{
-                                        return(
-                                            <div key={item.fund_id} className={styles.card}>
+                        {
+                            lendData?.sort((a,b)=> filterData == "pending"? ((a.goal-a.raised) - (b.goal-b.raised)):((b.goal-b.raised) - (a.goal-a.raised))).map((item)=>{
+                                return(
+                                    <div key={item.fund_id} className={styles.card}>
                             
-                                            <div style={{ paddingLeft: "10px", paddingRight: "15px" }}>
-                                                <img className={styles.img} src={item.img} alt="name" />
-                                                <LinearProgress className={styles.bar} variant="determinate" value="20" />
-                                                <div className={styles.display}>
-                                                    <div>
-                                                         Funded
-                                                        <p>Rs.{item.raised}</p>
-                                                    </div>
-                                                    <div style={{ paddingLeft: "120px", textAlign: "right" }}>
-                                                        Still Requires
-                                                        <p>{item.goal-item.raised}</p>
-                                                    </div>
-                                                </div>
-                                                <button onClick = {()=>this.completeLoan(item.lend_id)} className={styles.btn}>Complete the Loan</button>
-                                            </div>
+                                    <div style={{ paddingLeft: "10px", paddingRight: "15px" }}>
+                                    <img className={styles.img} src={item.img} alt="name" />
+                                    <LinearProgress className={styles.bar} variant="determinate" value="20" />
+                                        <div className={styles.display}>
                                             <div>
-                                                <Link to="" style={{textDecoration:"red",borderBottomColor:"red"}}><h1 className={styles.h1}>Swarnlata Barik & Group</h1></Link>
+                                                Funded
+                                                <p>Rs.{item.raised}</p>
+                                            </div>
+                                            <div style={{ paddingLeft: "120px", textAlign: "right" }}>
+                                            Still Requires
+                                            <p>{item.goal-item.raised}</p>
+                                            </div>
+                                        </div>
+                                        <button onClick = {()=>this.completeLoan(item.lend_id)} className={styles.btn}>Complete the Loan</button>
+                                        </div>
+                                        <div>
+                                            <Link to="" style={{textDecoration:"red",borderBottomColor:"red"}}><h1 className={styles.h1}>{item.title} </h1></Link>
                                                 <div><LocationOnIcon />NUPATNA, Odisa</div>
                                                 <div className={styles.purpose}><b>Purpose</b> : to purchase better crop seeds, fertilizers, herbicides, etc. in order to expand her vegetable selling enterprise</div>
                                                 <div className={styles.desc}>{item.story}

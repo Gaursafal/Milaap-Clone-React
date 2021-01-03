@@ -56,7 +56,7 @@ class CardDetails extends Component {
                 <div className={styles.facebook}>
                     <div>
                         <p className={styles.bold}>32 </p>
-                        <p>shares</p>
+                        <p className={styles.para} >shares</p>
                     </div>
                     <div className={styles.fac} >
                         
