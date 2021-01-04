@@ -42,7 +42,7 @@ export default class Login extends React.Component {
              <> 
                 <div className = {styles.body}>
                 <div className = {styles.container}>
-                    <img className={styles.img} src="/milap.png" alt = "milap"/>
+                    <img className={styles.img} src="https://assets.milaap.org/assets/milaap-logo-tiny-e1fe9eb152a9ab7297c3f9a194868904352a9fa2f19781ad8b39e4e18a372264.png" width="50px" alt = "milap"/>
                     <div className={styles.login}>
                         <div className = {styles.top}>Quickly Login Using</div>
                         <div className = {styles.btn}>
@@ -80,5 +80,4 @@ export default class Login extends React.Component {
         );
     }
 }
-
 Login.contextType = DataContext
