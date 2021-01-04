@@ -59,7 +59,7 @@ class DataContextProvider extends Component {
     });
 
     axios
-      .get("http://localhost:3004/users")
+      .get("https://json-server-milaap.herokuapp.com/users")
 
       .then((res) => {
         this.setState({
@@ -82,7 +82,7 @@ class DataContextProvider extends Component {
       isLoading: true,
     });
     axios({
-      url: "http://localhost:3004/fundraise",
+      url: "https://json-server-milaap.herokuapp.com/fundraise",
     })
       .then((res) => {
         this.setState({
@@ -108,7 +108,7 @@ class DataContextProvider extends Component {
       isLoading: true,
     });
     axios({
-      url: "http://localhost:3004/fundDetails",
+      url: "https://json-server-milaap.herokuapp.com/fundDetails",
     })
       .then((res) => {
         this.setState({
