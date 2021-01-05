@@ -12,6 +12,7 @@ import Navbar from "../Components/Navbar/Navbar"
 import Register from "../Components/RegistrationPage/Register"
 import SuccessStory from "../Components/SuccesStory/SuccessStory"
 import { PrivateRoute } from "./PrivateRoute"
+import ResNavbar from '../Components/ResNavbar/ResNavbar'
 
 class Routes extends Component {
     render(){
@@ -20,8 +21,7 @@ class Routes extends Component {
                 <Route path="/login" exact render = {()=><Login />} />
     
                 <Route path="/reg"  exact render = {(props)=><Register {...props}/>} />
-                 <PrivateRoute path="/"  Component={Navbar}/>
-                 {/* <PrivateRoute path="/"  Component={NavigationBar}/> */}
+                <PrivateRoute path="/"  Component={ResNavbar}/>
                 
                 <Switch>
                     <Route  path="/" exact render={()=><HomePage/>}/>

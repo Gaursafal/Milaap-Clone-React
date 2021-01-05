@@ -5,7 +5,7 @@ import SearchIcon from '@material-ui/icons/Search';
 class SuccessStory extends Component {
     render() {
         return (
-            <div>
+            <div style={{marginTop:"80px"}} >
                 
                 <h1 className = {styles.h1}>Stories Of Crowdfunding</h1>
                 <h2 className = {styles.h1}>Read inspiring stories of crowdfunding from across India</h2>
